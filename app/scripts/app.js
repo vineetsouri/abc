@@ -31,6 +31,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/abckidsworld/upload', {
+        templateUrl: 'views/uploadproducts.html',
+        controller: 'UploadproductsCtrl',
+        controllerAs: 'uploadProducts'
+      })
       .otherwise({
         redirectTo: '/'
       });
