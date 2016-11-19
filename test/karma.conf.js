@@ -32,6 +32,11 @@ module.exports = function(config) {
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/slick-carousel/slick/slick.js',
+      'bower_components/firebase/firebase.js',
+      'bower_components/angularfire/dist/angularfire.js',
+      'bower_components/lodash/lodash.js',
+      'bower_components/cloudinary-core/cloudinary-core.js',
+      'bower_components/cloudinary_ng/js/angular.cloudinary.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
