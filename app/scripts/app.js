@@ -17,14 +17,17 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'firebase',
+    'cloudinary',,
+    'ngFileUpload',
+    'ngMaterial'
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        controller: 'MainCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -33,10 +36,14 @@ angular
       })
       .when('/abckidsworld/upload', {
         templateUrl: 'views/uploadproducts.html',
-        controller: 'UploadproductsCtrl',
-        controllerAs: 'uploadProducts'
+        controller: 'UploadproductsCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+  .config(['cloudinaryProvider', function (cloudinaryProvider) {
+  cloudinaryProvider
+      .set("cloud_name", "rakeshschool")
+      .set("upload_preset", "abckidsworld");
+  }]);

@@ -1,1 +1,48 @@
-<p>This is the uploadProducts view.</p>
+<div class="container">
+<h2>upload your product</h2>
+    <form ng-submit="productSubmit(details)">
+        <div class="row">
+            <div class="col-md-4">
+                <md-input-container>
+                <label>Name</label>
+                <input ng-model="details.name">
+              </md-input-container>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <md-input-container>
+                <label>Description</label>
+                <textarea name="" ng-model='details.description'></textarea>
+              </md-input-container>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <md-input-container>
+                <label>Quantity</label>
+                   <input type="number" ng-model='details.quantity'>
+              </md-input-container>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div href="#" class="upload_button" ngf-select="uploadFiles($files)" multiple title="upload" resetOnClick="true" >Upload</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <md-input-container>
+                <label>Categories</label>
+                   <md-select ng-model="details.myCategories">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="state in categories" ng-value="state.$id">
+                      {{state.name}}
+                    </md-option>
+                  </md-select>
+              </md-input-container>
+            </div>
+        </div>
+        <input type="submit" id="submit" value="Submit" />
+    </form>
+</div>
