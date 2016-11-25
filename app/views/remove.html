@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+       <md-input-container>
+          <label>Categories</label>
+             <md-select ng-model="clickedCategories" ng-change="categoryChange(clickedCategories)">
+              <md-option><em>None</em></md-option>
+              <md-option ng-repeat="state in categories" ng-value="state.$id">
+                {{state.name}}
+              </md-option>
+            </md-select>
+        </md-input-container>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+       <md-input-container>
+          <label>Products</label>
+             <md-select ng-model="clickedProduct">
+              <md-option><em>None</em></md-option>
+              <md-option ng-repeat="state in listProducts" ng-value="state.image_publicId">
+                {{state.name}}
+              </md-option>
+            </md-select>
+        </md-input-container>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <md-button ng-click="deleteImage()"> Delete Image</md-button>
+    </div>
+  </div>
+</div>

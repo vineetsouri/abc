@@ -38,6 +38,16 @@ angular
         templateUrl: 'views/uploadproducts.html',
         controller: 'UploadproductsCtrl'
       })
+      .when('/abckidsworld/remove', {
+        templateUrl: 'views/remove.html',
+        controller: 'RemoveCtrl',
+        controllerAs: 'remove'
+      })
+      .when('/products', {
+        templateUrl: 'views/products.html',
+        controller: 'ProductsCtrl',
+        controllerAs: 'products'
+      })
       .otherwise({
         redirectTo: '/'
       });

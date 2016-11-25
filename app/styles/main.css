@@ -22,3 +22,8 @@
 .upload_button:hover {
     background-color: rgb(17, 133, 240);
 }
+
+.productImage img{
+    height:300px;
+    width: 400px;
+}
