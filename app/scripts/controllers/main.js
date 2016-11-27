@@ -8,9 +8,10 @@
  * Controller of the abckidsworldApp
  */
 angular.module('abckidsworldApp')
-  .controller('MainCtrl', function ($scope,$firebaseArray) {
-    var ref = firebase.database().ref().child("categories");
-    // create a synchronized array
-    // click on `index.html` above to see it used in the DOM!
-    $scope.messages = $firebaseArray(ref);
+  .controller('MainCtrl', function ($scope,$firebaseArray, productService) {
+    $scope.getSliderImages = function(){
+      productService.getTopProducts().then(function(res){
+        console.log(res);
+      })
+    }
   });

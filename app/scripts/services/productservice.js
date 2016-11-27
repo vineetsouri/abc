@@ -18,7 +18,9 @@ angular.module('abckidsworldApp')
       getCategories: getCategories,
       getProducts: getProducts,
       removeProducts: removeProducts,
-      getProductById: getProductById
+      getProductById: getProductById,
+      getTopProducts: getTopProducts,
+      getNewProducts: getNewProducts
     }
 
     return service;
@@ -36,6 +38,18 @@ angular.module('abckidsworldApp')
     }
 
     function getProducts(){
+      var ref = firebase.database().ref().child("products");
+
+      return $firebaseArray(ref);
+    }
+
+    function getTopProducts(){
+      var ref = firebase.database().ref().child("products").child("price").equalTo(2000);
+      console.log($firebaseArray(ref));
+      return $firebaseArray(ref);
+    }
+
+    function getNewProducts(){
       var ref = firebase.database().ref().child("products");
 
       return $firebaseArray(ref);

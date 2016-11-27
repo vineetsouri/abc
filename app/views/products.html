@@ -25,7 +25,7 @@
   <div class="col s12 m4" ng-repeat="product in myProducts">
     <div class="card large">
       <div class="card-image">
-        <img src="{{product.imageUrl}}">
+        <img ng-src="{{product.imageUrl}}">
         <span class="card-title">{{product.name}}</span>
       </div>
       <div class="card-content">

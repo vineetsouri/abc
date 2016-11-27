@@ -11,6 +11,9 @@ nav a:hover{
 nav ul a:hover {
   color: white;
 }
+a{
+    text-decoration: none;
+}
 
 /*Nav Bar End*/
 
@@ -72,9 +75,21 @@ nav ul a:hover {
   background-color: #e67e22;
 }
 
+#section2 .slick-carousel{
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}
+
 #section3 {
   height: 100vh;
   background-color: #2980b9;
+}
+
+#section3 .slick-carousel{
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
 }
 
 /*Main.html end*/
@@ -95,9 +110,9 @@ nav ul a:hover {
     cursor: pointer;
 }
 
-.arrow_button{
+/*.arrow_button{
     background-color: aquamarine;
-}
+}*/
 
 .upload_button_holder .upload_button {
     display: block;
