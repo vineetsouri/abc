@@ -21,7 +21,8 @@ angular
     'firebase',
     'cloudinary',,
     'ngFileUpload',
-    'ngMaterial'
+    'ngMaterial',
+    'slick'
   ])
   .config(function ($routeProvider) {
     $routeProvider

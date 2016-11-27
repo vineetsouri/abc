@@ -1,3 +1,50 @@
-<ul>
-      <li ng-repeat="message in messages">{{ message.name }}</li>
-    </ul>
+<div class="main">
+  <div class="container-fluid main-container">
+    <div class="row content">
+      <span id="welcome">Welcome</span> <br>
+      <span id="to">to</span><br>
+      <span id="company-name">ABC KIDS WORLD</span>
+    </div>
+  </div>
+  <section id="reviews">
+    <div class="carousel carousel-slider center" data-indicators="true">
+      <div class="carousel-fixed-item center">
+        <h6>Company Reviews</h6>
+      </div>
+      <div class="carousel-item red white-text" href="#one!">
+        <h2 class="review-content">Vineet Souri</h2>
+        <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id excepturi aliquam non, voluptates nostrum, dicta totam a, obcaecati recusandae voluptatum quaerat, officiis? Ipsam culpa eum, minus, voluptatum non cupiditate dicta.</p>
+      </div>
+      <div class="carousel-item amber white-text" href="#two!">
+        <h2 class="review-content">Ankit Sabinkar</h2>
+        <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id excepturi aliquam non, voluptates nostrum, dicta totam a, obcaecati recusandae voluptatum quaerat, officiis? Ipsam culpa eum, minus, voluptatum non cupiditate dicta.</p>
+      </div>
+      <div class="carousel-item green white-text" href="#three!">
+        <h2 class="review-content">Virat Kohli</h2>
+        <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id excepturi aliquam non, voluptates nostrum, dicta totam a, obcaecati recusandae voluptatum quaerat, officiis? Ipsam culpa eum, minus, voluptatum non cupiditate dicta.</p>
+      </div>
+      <div class="carousel-item blue white-text" href="#four!">
+        <h2 class="review-content">Sunil Gavaskar</h2>
+        <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id excepturi aliquam non, voluptates nostrum, dicta totam a, obcaecati recusandae voluptatum quaerat, officiis? Ipsam culpa eum, minus, voluptatum non cupiditate dicta.</p>
+      </div>
+    </div>
+  </section>
+  <section id="section2">
+  <!-- <slick dots=true infinite=true speed=300 slides-to-show=5 touch-move=false slides-to-scroll=1 arrows=true>
+    <button type="button" class="slick-prev arrow_button">Previous</button>
+    <div><h3>1</h3></div>
+    <div><h3>2</h3></div>
+    <div><h3>3</h3></div>
+    <div><h3>4</h3></div>
+    <div><h3>5</h3></div>
+    <div><h3>6</h3></div>
+    <button type="button" class="slick-next arrow_button">Next</button>
+  </slick> -->
+  </section>
+  <section id="section3"></section>
+</div>
+
+<script>
+  $('.carousel-slider').carousel({time_constant: 200, full_width: true});
+</script>
+

@@ -1,3 +1,83 @@
+/*Main.html*/
+/*Nav Bar*/
+nav{
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  background-color: #433E3B;
+}
+nav a:hover{
+  text-decoration: none;
+}
+nav ul a:hover {
+  color: white;
+}
+
+/*Nav Bar End*/
+
+.main {
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+}
+
+.main-container {
+  height: 90.3vh;
+  width: 100%;
+  background: url("../../images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid transparent;
+  text-align: center;
+  color: #ecf0f1;
+  font-weight: 100;
+}
+
+#welcome {
+  font-size: 3.5em;
+}
+
+#to {
+  font-size: 1.5em;
+}
+
+#company-name {
+  font-size: 5em;
+  font-weight: 300;
+}
+
+#reviews {
+  height: 50vh;
+  background-color: #e74c3c;
+}
+#reviews .carousel-slider {
+  height: 50vh;
+}
+#reviews .carousel-fixed-item {
+  color: white;
+}
+#reviews .review-content {
+  padding-top: 10%;
+}
+#reviews p {
+  width: 50em;
+  margin: auto;
+}
+
+#section2 {
+  height: 100vh;
+  background-color: #e67e22;
+}
+
+#section3 {
+  height: 100vh;
+  background-color: #2980b9;
+}
+
+/*Main.html end*/
 .upload_button {
     display: inline-block;
     position: relative;
@@ -15,6 +95,10 @@
     cursor: pointer;
 }
 
+.arrow_button{
+    background-color: aquamarine;
+}
+
 .upload_button_holder .upload_button {
     display: block;
 } 
@@ -23,7 +107,6 @@
     background-color: rgb(17, 133, 240);
 }
 
-.productImage img{
-    height:300px;
-    width: 400px;
+.view-product{
+  text-align: center;
 }

@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <h2>Products</h2>
   <div class="row">
     <div class="col-md-5" ng-repeat="product in myProducts">
@@ -15,6 +15,26 @@
           <md-button>Buy</md-button>
         </md-card-actions>
       </md-card>
+    </div>
+  </div>
+</div>
+
+ -->
+<div class="row">
+  <h2>Products</h2>
+  <div class="col s12 m4" ng-repeat="product in myProducts">
+    <div class="card large">
+      <div class="card-image">
+        <img src="{{product.imageUrl}}">
+        <span class="card-title">{{product.name}}</span>
+      </div>
+      <div class="card-content">
+        <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+      </div>
+      <div class="card-action">
+        <a class="waves-effect waves-light btn view-product">View Product</a>
+      </div>
     </div>
   </div>
 </div>
