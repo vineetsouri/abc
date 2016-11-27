@@ -19,25 +19,42 @@ angular.module('abckidsworldApp')
       $scope.products.forEach(function(product){
 
         if(product.myCategories == value){
-          console.log(product);
           $scope.listProducts.push(product);
         }
       });
     }
 
-    $scope.deleteImage = function(){
-        var publicId = $scope.clickedProduct;
-        console.log(publicId);
-        console.log(cloudinary.uploader.destroy(publicId, function(result){console.log(result)}));
-      //   cloudinary.api.delete_resources(publicId, function(result) {
-      //   console.log(result);
-      //    if(result.hasOwnProperty("error")){
-      //        callback(result);
-      //        return;
-      //    }else{
-      //         callback(result);
+    $scope.productChange = function(){
+      $scope.listProducts.forEach(function(value){
+        if($scope.clickedProduct == value.$id){
+          $scope.details = value;
+        }
+      });
+    };
 
-      //    }  
-      // })
+    $scope.updateProduct = function(){
+     var getProducts = productService.getProductById($scope.clickedProduct);
+     var p = Promise.resolve(getProducts);
+     p.then(function(data){
+        data.name = $scope.details.name;
+        data.description = $scope.details.description || "";
+        data.price = $scope.details.price;
+        data.topProduct = $scope.details.topProduct;
+        data.newProduct = $scope.details.newProduct;
+        data.$save().then(function(val){
+          $scope.details = {};
+        }, function(error){
+          console.log(error)
+        })
+     });
+    }
+
+    $scope.deleteImage = function(){
+      var p = Promise.resolve(productService.getProducts());
+      var myProducts;
+      p.then(function(v){
+        myProducts = v;
+        productService.removeProducts($scope.clickedProduct, myProducts)
+      })
     }
   });

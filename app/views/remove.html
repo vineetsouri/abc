@@ -3,7 +3,7 @@
     <div class="col-md-4">
        <md-input-container>
           <label>Categories</label>
-             <md-select ng-model="clickedCategories" ng-change="categoryChange(clickedCategories)">
+             <md-select ng-model="clickedCategories" flex='100' ng-change="categoryChange(clickedCategories)">
               <md-option><em>None</em></md-option>
               <md-option ng-repeat="state in categories" ng-value="state.$id">
                 {{state.name}}
@@ -11,18 +11,60 @@
             </md-select>
         </md-input-container>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 remove">
        <md-input-container>
           <label>Products</label>
-             <md-select ng-model="clickedProduct">
+             <md-select ng-model="clickedProduct" ng-change='productChange()'>
               <md-option><em>None</em></md-option>
-              <md-option ng-repeat="state in listProducts" ng-value="state.image_publicId">
-                {{state.name}}
+              <md-option ng-repeat="state in listProducts" ng-value="state.$id">
+                <span class='removeImageText'>{{state.name}}</span>
               </md-option>
             </md-select>
         </md-input-container>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-offset-4 col-md-7">
+      <form ng-submit="updateProduct()">
+        <div class="row">
+            <div class="col-md-4">
+                <md-input-container>
+                <label>Name</label>
+                <input ng-model="details.name">
+              </md-input-container>
+            </div>
+            <div class="col-md-8">
+                <md-input-container>
+                <label>Description</label>
+                <textarea name="" ng-model='details.description'></textarea>
+              </md-input-container>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <md-input-container>
+                <label>Price</label>
+                   <input type="number" ng-model='details.price'>
+              </md-input-container>
+            </div>
+            <div class="col-md-8">
+              <img ng-src="{{details.imageUrl}}" alt="" style="height 200px;width:200px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <md-switch ng-model="details.topProduct" aria-label="TopProduct">
+                  Top Product : {{details.topProduct}}
+                </md-switch>
+            </div>
+            <div class="col-md-4">
+                <md-switch ng-model="details.newProduct" aria-label="TopProduct">
+                  New Product : {{details.newProduct}}
+                </md-switch>
+            </div>
+        </div>
+        <input type="submit" class="btn btn-success" value="Submit" />
+    </form>
     </div>
   </div>
   <div class="row">

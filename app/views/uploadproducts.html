@@ -1,6 +1,6 @@
 <div class="container">
 <h2>upload your product</h2>
-    <form ng-submit="productSubmit(details)">
+    <form ng-submit="updateProduct()">
         <div class="row">
             <div class="col-md-4">
                 <md-input-container>
@@ -41,6 +41,20 @@
                     </md-option>
                   </md-select>
               </md-input-container>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <md-switch ng-model="details.topProduct" aria-label="TopProduct">
+                  Top Product : {{details.topProduct}}
+                </md-switch>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <md-switch ng-model="details.newProduct" aria-label="TopProduct">
+                  New Product : {{details.newProduct}}
+                </md-switch>
             </div>
         </div>
         <input ng-disabled="checkImage" type="submit" class="btn btn-success" value="Submit" />

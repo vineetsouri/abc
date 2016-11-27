@@ -16,7 +16,9 @@ angular.module('abckidsworldApp')
     var service = {
       product: product,
       getCategories: getCategories,
-      getProducts: getProducts
+      getProducts: getProducts,
+      removeProducts: removeProducts,
+      getProductById: getProductById
     }
 
     return service;
@@ -37,5 +39,14 @@ angular.module('abckidsworldApp')
       var ref = firebase.database().ref().child("products");
 
       return $firebaseArray(ref);
+    }
+
+    function getProductById(key){
+      var ref = firebase.database().ref().child("products").child(key);
+      return $firebaseObject(ref);
+    }
+
+    function removeProducts(productId, product){
+      product.$remove(product.$indexFor(productId));
     }
   }
