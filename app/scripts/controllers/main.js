@@ -10,8 +10,12 @@
 angular.module('abckidsworldApp')
   .controller('MainCtrl', function ($scope,$firebaseArray, productService) {
     $scope.getSliderImages = function(){
-      productService.getTopProducts().then(function(res){
-        console.log(res);
+      var p = productService.getProducts().$loaded();
+      p.then(function(data){
+        $scope.topProducts = data.filter(function(val){
+          console.log(val);
+          return val.topProduct === "true";
+        });
       })
     }
   });

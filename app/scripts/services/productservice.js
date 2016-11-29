@@ -10,16 +10,15 @@
 angular.module('abckidsworldApp')
   .service('productService', productService);
 
-  productService.$inject = ['$firebaseObject', '$firebaseArray'];
+  productService.$inject = ['$firebaseObject', '$firebaseArray', '$q'];
 
-  function productService($firebaseObject, $firebaseArray){
+  function productService($firebaseObject, $firebaseArray, $q){
     var service = {
       product: product,
       getCategories: getCategories,
       getProducts: getProducts,
       removeProducts: removeProducts,
       getProductById: getProductById,
-      getTopProducts: getTopProducts,
       getNewProducts: getNewProducts
     }
 
@@ -43,11 +42,20 @@ angular.module('abckidsworldApp')
       return $firebaseArray(ref);
     }
 
-    function getTopProducts(){
-      var ref = firebase.database().ref().child("products").child("price").equalTo(2000);
-      console.log($firebaseArray(ref));
-      return $firebaseArray(ref);
-    }
+    // function getTopProducts(){
+    //   var topProductList = [];
+    //   var deferred = $q.defer();
+    //   var ref = firebase.database().ref('products');
+    //   ref.orderByChild("topProduct").equalTo("true").on("child_added", function(snapshot) {
+    //       topProductList.push(snapshot.val());
+    //   });
+    //   if(topProductList){
+    //     deferred.resolve(topProductList);
+    //   }
+    //   deferred.reject("empty");
+    //   console.log(deferred.promise);
+    //   return deferred.promise;
+    // }
 
     function getNewProducts(){
       var ref = firebase.database().ref().child("products");

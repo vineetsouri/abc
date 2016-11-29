@@ -41,8 +41,8 @@ angular.module('abckidsworldApp')
       myCategories: '',
       imageUrl: '',
       image_publicId: '',
-      topProduct: false,
-      newProduct: false
+      topProduct: "false",
+      newProduct: "false"
     }
     $scope.details = productService.product();
     $scope.productSubmit = function(){
@@ -54,8 +54,8 @@ angular.module('abckidsworldApp')
           myCategories: '',
           imageUrl: '',
           image_publicId: '',
-          topProduct: false,
-          newProduct: false
+          topProduct: "false",
+          newProduct: "false"
         };
         $scope.checkImage = true;
         $scope.details = productService.product();
