@@ -129,3 +129,13 @@ a{
 .productImage{
   margin: 5px;
 }
+
+.products-page{
+  background-color: #bdc3c7;
+}
+
+.products-heading{
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-align: center;
+}

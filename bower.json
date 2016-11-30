@@ -31,5 +31,9 @@
         "dist/js/bootstrap.js"
       ]
     }
+  },
+  "resolutions": {
+    "slick-carousel": "~1.4.1",
+    "angular": "^1.4.0"
   }
 }

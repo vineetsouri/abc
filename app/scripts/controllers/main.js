@@ -10,6 +10,7 @@
 angular.module('abckidsworldApp')
   .controller('MainCtrl', function ($scope,$firebaseArray, productService, $timeout) {
     var topProduct;
+
     $scope.getSliderImages = function(){
       var p = productService.getProducts().$loaded();
       p.then(function(data){
