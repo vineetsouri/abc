@@ -14,7 +14,7 @@ angular.module('abckidsworldApp')
 
     $scope.uploadFiles = function(files){
       $scope.files = files;
-      if (!$scope.files) return;
+      if (!$scope.files) {return}
       angular.forEach(files, function(file){
         if (file && !file.$error) {
           file.upload = Upload.upload({
@@ -41,11 +41,12 @@ angular.module('abckidsworldApp')
       myCategories: '',
       imageUrl: '',
       image_publicId: '',
-      topProduct: "false",
-      newProduct: "false"
-    }
+      topProduct: 'false',
+      newProduct: 'false'
+    };
     $scope.details = productService.product();
-    $scope.productSubmit = function(){
+    $scope.updateProduct = function(){
+      console.log($scope.details);
       $scope.details.$save().then(function(){
         $scope.details = {
           name: '',
@@ -54,14 +55,14 @@ angular.module('abckidsworldApp')
           myCategories: '',
           imageUrl: '',
           image_publicId: '',
-          topProduct: "false",
-          newProduct: "false"
+          topProduct: 'false',
+          newProduct: 'false'
         };
         $scope.checkImage = true;
         $scope.details = productService.product();
       }).catch(function(error){
         alert("error");
-      })
-    }
+      });
+    };
 
   });

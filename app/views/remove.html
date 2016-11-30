@@ -3,7 +3,7 @@
     <div class="col-md-4">
        <md-input-container>
           <label>Categories</label>
-             <md-select ng-model="clickedCategories" flex='100' ng-change="categoryChange(clickedCategories)">
+             <md-select ng-model="clickedCategories" ng-change="categoryChange(clickedCategories)">
               <md-option><em>None</em></md-option>
               <md-option ng-repeat="state in categories" ng-value="state.$id">
                 {{state.name}}
@@ -53,14 +53,22 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <md-switch ng-model="details.topProduct" aria-label="TopProduct">
-                  Top Product : {{details.topProduct}}
-                </md-switch>
+                <md-input-container>
+                    <label>TopProducts</label>
+                    <md-select ng-model="details.topProduct">
+                        <md-option>true</md-option>
+                        <md-option>false</md-option>
+                    </md-select>
+                </md-input-container>
             </div>
             <div class="col-md-4">
-                <md-switch ng-model="details.newProduct" aria-label="TopProduct">
-                  New Product : {{details.newProduct}}
-                </md-switch>
+                <md-input-container>
+                    <label>NewProducts</label>
+                    <md-select ng-model="details.newProduct">
+                        <md-option>true</md-option>
+                        <md-option>false</md-option>
+                    </md-select>
+                </md-input-container>
             </div>
         </div>
         <input type="submit" class="btn btn-success" value="Submit" />

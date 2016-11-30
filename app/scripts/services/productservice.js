@@ -10,9 +10,9 @@
 angular.module('abckidsworldApp')
   .service('productService', productService);
 
-  productService.$inject = ['$firebaseObject', '$firebaseArray', '$q'];
+  productService.$inject = ['$firebaseObject', '$firebaseArray'];
 
-  function productService($firebaseObject, $firebaseArray, $q){
+  function productService($firebaseObject, $firebaseArray){
     var service = {
       product: product,
       getCategories: getCategories,

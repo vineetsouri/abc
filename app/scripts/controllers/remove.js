@@ -9,10 +9,16 @@
  */
 angular.module('abckidsworldApp')
   .controller('RemoveCtrl', function (productService, $scope, cloudinary) {
-    $scope.categories = productService.getCategories();
     $scope.clickedCategories = "";
     $scope.listProducts = [];
-    $scope.products = productService.getProducts();
+    var g = Promise.resolve(productService.getCategories());
+    g.then(function(val){
+      $scope.categories = val;
+    })
+    var p = Promise.resolve(productService.getProducts());
+    p.then(function(val){
+      $scope.products = val;
+    })
 
     $scope.categoryChange = function(value){
       $scope.listProducts = [];
@@ -20,17 +26,31 @@ angular.module('abckidsworldApp')
 
         if(product.myCategories == value){
           $scope.listProducts.push(product);
+          $scope.details = {};
+          $scope.details.imageUrl = "";
         }
       });
     }
 
     $scope.productChange = function(){
+      $scope.details = {};
       $scope.listProducts.forEach(function(value){
         if($scope.clickedProduct == value.$id){
           $scope.details = value;
         }
       });
     };
+
+    $scope.details = {
+      name: '',
+      description: '',
+      price: '',
+      myCategories: '',
+      imageUrl: '',
+      image_publicId: '',
+      topProduct: 'false',
+      newProduct: 'false'
+    }
 
     $scope.updateProduct = function(){
      var getProducts = productService.getProductById($scope.clickedProduct);
