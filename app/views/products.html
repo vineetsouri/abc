@@ -2,16 +2,19 @@
   <h2 class="products-heading">Products</h2>
   <div class="row">
     <div class="col s12">
-      <ul class="tabs">
-        <li class="tab col s1" ng-repeat="category in allCategories"><a href="#test1">{{category.name}}</a></li>
+      <ul class="tabs tabs-fixed-width">
+        <li class="tab col s1" ng-repeat="category in allCategories"><a ng-href="#{{category.$id}}" ng-click="categoryClicked(category.$id)">{{category.name}}</a></li>
         <!-- <li class="tab col s3"><a href="#test1">Test 1</a></li>
         <li class="tab col s3"><a class="active" href="#test2">Test 2</a></li>
         <li class="tab col s3"><a href="#test3">Test 3</a></li>
         <li class="tab col s3"><a href="#test4">Test 4</a></li> -->
       </ul>
     </div>
+    <div id="default" ng-if="loaded">
+      Please select a category to view products.
+    </div>
     <div id="test1" class="col s12">
-      <div class="col s12 m4" ng-repeat="product in myProducts">
+      <div class="col s12 m4" ng-repeat="product in categoryProducts">
         <div class="card large">
           <div class="card-image">
             <img ng-src="{{product.imageUrl}}">
@@ -27,9 +30,6 @@
         </div>
       </div>
     </div>
-    <div id="test2" class="col s12">Test 2</div>
-    <div id="test3" class="col s12">Test 3</div>
-    <div id="test4" class="col s12">Test 4</div>
   </div>
 </div>
 
