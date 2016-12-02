@@ -31,7 +31,7 @@
   </section>
   <section id="section2">
     <div class="container slick-carousel">
-      <slick dots=true infinite=true speed=300 slides-to-show=1 init-onload=true data="topProducts" touch-move=false slides-to-scroll=1 arrows=true>
+      <slick dots=true infinite=true speed=300 slides-to-show=4 init-onload=true data="topProducts" touch-move=false slides-to-scroll=1 arrows=true>
         <button type="button" class="slick-prev arrow_button">Previous</button>
         <div ng-repeat="product in topProducts">
           <span class="productImage">
@@ -44,9 +44,11 @@
   </section>
   <section id="section3">
     <div class="container slick-carousel">
-      <slick dots=true infinite=true speed=300 slides-to-show=5 touch-move=false slides-to-scroll=1 arrows=true>
+      <slick dots=true infinite=true speed=300 slides-to-show=4 touch-move=false init-onload=true data="newProducts" slides-to-scroll=1 arrows=true>
         <button type="button" class="slick-prev arrow_button">Previous</button>
-          
+          <div ng-repeat="product in newProducts">
+            <img ng-src="{{product.imageUrl}}" alt="{{product.name}}" style="height: 200px; width:150px">
+          </div>
         <button type="button" class="slick-next arrow_button">Next</button>
       </slick>
     </div>

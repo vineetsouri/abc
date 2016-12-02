@@ -8,6 +8,11 @@
  * Controller of the abckidsworldApp
  */
 angular.module('abckidsworldApp')
-  .controller('ProductsCtrl', function ($scope, productService) {
+  .controller('ProductsCtrl', function ($scope, productService, $location) {
     $scope.myProducts = productService.getProducts();
+
+    $scope.viewProduct = function(id){
+      $location.url('/viewproduct/'+id);
+    };
+
   });

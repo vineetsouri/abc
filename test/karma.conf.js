@@ -39,6 +39,8 @@ module.exports = function(config) {
       'bower_components/cloudinary_ng/js/angular.cloudinary.js',
       'bower_components/angular-material/angular-material.js',
       'bower_components/ng-file-upload/ng-file-upload.js',
+      'bower_components/ez-plus/src/jquery.ez-plus.js',
+      'bower_components/angular-ez-plus/js/angular-ezplus.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
