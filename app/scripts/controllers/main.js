@@ -8,7 +8,7 @@
  * Controller of the abckidsworldApp
  */
 angular.module('abckidsworldApp')
-  .controller('MainCtrl', function ($scope,$firebaseArray, productService, $timeout) {
+  .controller('MainCtrl', function ($scope,$firebaseArray, productService, $timeout, $location) {
     var myTopProduct;
     var myNewProduct;
     $scope.getSliderImages = function(){
@@ -25,6 +25,10 @@ angular.module('abckidsworldApp')
           $scope.newProducts = myNewProduct;
         }, 1);
       })
+    }
+
+    $scope.checkProduct = function(id){
+        $location.url('/viewproduct/'+id);
     }
 
   });

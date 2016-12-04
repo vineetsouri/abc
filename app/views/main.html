@@ -30,12 +30,14 @@
     </div>
   </section>
   <section id="section2">
+    <h3>TOP PRODUCTS</h3>
     <div class="container slick-carousel">
-      <slick dots=true infinite=true speed=300 slides-to-show=5 init-onload=true data="topProducts" touch-move=false slides-to-scroll=1 arrows=true>
+      <slick dots=true infinite=true speed=300 autoplay=true slides-to-show=5 init-onload=true data="topProducts" touch-move=false slides-to-scroll=1 arrows=true>
         <button type="button" class="slick-prev arrow_button">Previous</button>
         <div ng-repeat="product in topProducts">
           <span class="productImage">
-            <img ng-src="{{product.imageUrl}}" alt="{{product.name}}" style="height: 200px; width:150px">
+            <img ng-src="{{product.imageUrl}}" alt="{{product.name}}" style="height: 200px; width:150px" ng-click="checkProduct(product.$id)">
+            <p>{{product.name}}</p>
           </span>
         </div>
         <button type="button" class="slick-next arrow_button">Next</button>
@@ -43,11 +45,15 @@
     </div>
   </section>
   <section id="section3">
+    <!--<h3>NEW PRODUCTS</h3>-->
     <div class="container slick-carousel">
-      <slick dots=true infinite=true speed=300 slides-to-show=4 touch-move=false init-onload=true data="newProducts" slides-to-scroll=1 arrows=true>
+      <slick dots=true infinite=true speed=300 autoplay=true slides-to-show=4 touch-move=false init-onload=true data="newProducts" slides-to-scroll=1 arrows=true>
         <button type="button" class="slick-prev arrow_button">Previous</button>
           <div ng-repeat="product in newProducts">
-            <img ng-src="{{product.imageUrl}}" alt="{{product.name}}" style="height: 200px; width:150px">
+            <span class="newImage">
+              <img ng-src="{{product.imageUrl}}" alt="{{product.name}}" style="height: 200px; width:150px" ng-click="checkProduct(product.$id)">
+              <p>{{product.name}}</p>
+            </span>
           </div>
         <button type="button" class="slick-next arrow_button">Next</button>
       </slick>

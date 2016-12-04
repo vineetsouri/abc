@@ -8,7 +8,7 @@
  * Controller of the abckidsworldApp
  */
 angular.module('abckidsworldApp')
-  .controller('ProductsCtrl', function ($scope, productService) {
+  .controller('ProductsCtrl', function ($scope, productService, $location) {
     $scope.loaded = true;
     var products = productService.getProducts().$loaded();
     products.then(function(data){

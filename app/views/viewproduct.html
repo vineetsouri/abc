@@ -1,13 +1,8 @@
 
-<p>This is the viewproduct view.</p>
 <div class="container">
     <div class="row">
         <div class="col-md-5">
-        <img data-zoom-image="{{detail.imageUrl}}"
-     id="zoom_01" ng-src="{{smallImage}}" alt="">
+        <img ng-elevate-zoom zoom-image="{{detail.imageUrl}}" ng-src="{{smallImage}}" alt="">
         </div>
     </div>
 </div>
-<script>
-    $("#zoom_01").ezPlus();
-</script>
