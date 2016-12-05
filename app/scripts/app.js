@@ -41,8 +41,7 @@ angular
       })
       .when('/abckidsworld/remove', {
         templateUrl: 'views/remove.html',
-        controller: 'RemoveCtrl',
-        controllerAs: 'remove'
+        controller: 'RemoveCtrl'
       })
       .when('/products', {
         templateUrl: 'views/products.html',
@@ -54,8 +53,7 @@ angular
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
-        controller: 'ContactCtrl',
-        controllerAs: 'contact'
+        controller: 'ContactCtrl'
       })
       .otherwise({
         redirectTo: '/'
