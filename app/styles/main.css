@@ -31,7 +31,7 @@ a:active{color: white;}
 .main-container {
   height: 90.3vh;
   width: 100%;
-  background: url("../../images/background.jpg") no-repeat center center fixed;
+  background: url("../images/background.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
