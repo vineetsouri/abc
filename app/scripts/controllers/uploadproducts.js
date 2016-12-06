@@ -46,7 +46,6 @@ angular.module('abckidsworldApp')
     };
     $scope.details = productService.product();
     $scope.updateProduct = function(){
-      console.log($scope.details);
       $scope.details.$save().then(function(){
         $scope.details = {
           name: '',

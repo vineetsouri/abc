@@ -170,3 +170,20 @@ a:active{color: white;}
     margin-left:5px;
     background:white;
 }
+
+/*single product css*/
+
+.detailProduct{
+  margin-top: 50px;
+}
+.productDetail{
+  height:400px;
+  position: relative;
+}
+.productDetail .buyProduct{
+  position: absolute;
+  bottom: 0;
+}
+.productDetail .buyProduct a{
+  right:0;
+}

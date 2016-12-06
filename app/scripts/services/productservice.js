@@ -13,13 +13,17 @@ angular.module('abckidsworldApp')
   productService.$inject = ['$firebaseObject', '$firebaseArray'];
 
   function productService($firebaseObject, $firebaseArray){
+    var productId;
     var service = {
       product: product,
       getCategories: getCategories,
       getProducts: getProducts,
       removeProducts: removeProducts,
       getProductById: getProductById,
-      getNewProducts: getNewProducts
+      getNewProducts: getNewProducts,
+      addContact : addContact,
+      sendProductDetail: sendProductDetail,
+      buyProduct: buyProduct
     }
 
     return service;
@@ -71,4 +75,19 @@ angular.module('abckidsworldApp')
     function removeProducts(productId, product){
       product.$remove(product.$indexFor(productId));
     }
+    
+    function addContact(){
+      var ref = firebase.database().ref("contactDetail").push();
+      return $firebaseObject(ref);
+    }
+
+    function sendProductDetail(key){ 
+      var ref = firebase.database().ref().child("products").child(key);
+      productId = $firebaseObject(ref);
+    }
+
+    function buyProduct(){
+      return productId;
+    }
+
   }

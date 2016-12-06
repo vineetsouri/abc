@@ -1,8 +1,18 @@
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-5">
-        <img ng-elevate-zoom zoom-image="{{detail.imageUrl}}" ng-src="{{smallImage}}" alt="">
+    <div class="row detailProduct">
+        <div class="col-md-7">
+            <img ng-elevate-zoom zoom-image="{{detail.imageUrl}}" ng-src="{{smallImage}}" alt="">
+        </div>
+        <div class=" col-md-5 productDetail">
+            <h4>{{detail.name}}</h4>
+
+            <p>{{detail.description}}</p>
+
+            <div class="buyProduct">
+                <h5>Price: &#8377; {{detail.price}}</h5>
+                <a class="waves-effect waves-light btn" ng-click="buyProduct(detail.$id)"><i class="material-icons left">shopping_basket</i>Buy</a
+            </div>
         </div>
     </div>
 </div>
