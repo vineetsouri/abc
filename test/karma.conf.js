@@ -41,6 +41,7 @@ module.exports = function(config) {
       'app/bower_components/ng-file-upload/ng-file-upload.js',
       'app/bower_components/ez-plus/src/jquery.ez-plus.js',
       'app/bower_components/angular-ez-plus/js/angular-ezplus.js',
+      'app/bower_components/angular-slick/dist/slick.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
