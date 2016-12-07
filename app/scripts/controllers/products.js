@@ -26,7 +26,9 @@ angular.module('abckidsworldApp')
       });
     }
 
-    $scope.categoryClicked = function(category_id){
+    $scope.categoryClicked = function(category){
+      $scope.clickedCategory = category.name;
+      var category_id = category.$id
       $scope.loaded = false;
       $scope.categoryProducts = $scope.myProducts.filter(function(value){
         return value.myCategories === category_id;
