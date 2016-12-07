@@ -4,26 +4,33 @@
 body{
   font-family: 'Lato', sans-serif !important;
 }
+
 nav{
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   background-color: #2A2924;
 }
-nav ul li a{
-   text-decoration: none;
-    color: white;
+
+.nav-anchor, nav-anchor:hover, nav-anchor:active, nav-anchor:visited {
+  text-decoration: none !important;
+  color: white !important;
 }
-nav a:hover{
-  text-decoration: none;
+
+.mobile-links{
+  color: black !important;
 }
-nav ul a:hover {
-  color: white;
+
+.about{
+  font-family: 'Lato', sans-serif;
 }
-a{
-    text-decoration: none;
-    color: white;
+.about-abc{
+  font-weight: 300;
 }
-a:active{color: white;}
+
+.about p{
+  font-weight: 100;
+  margin: 2em;
+}
 
 /*Nav Bar End*/
 
@@ -73,11 +80,6 @@ a:active{color: white;}
   background-color: #e67e22;
 }
 
-#section2 .slick-carousel{
-  /*top: 50%;
-  transform: translateY(-50%);
-  position: relative;*/
-}
 #section2 h3{
   margin: 0px;
   text-align: center;
@@ -90,11 +92,6 @@ a:active{color: white;}
   background-color: #2980b9;
 }
 
-#section3 .slick-carousel{
-  /*top: 50%;
-  transform: translateY(-50%);
-  position: relative;*/
-}
 
 #section3 h3{
   margin: 0px;
@@ -233,6 +230,11 @@ label{
 
   #section3{
     display: none;
+  }
+  .about-abc{
+    font-weight: 300;
+    font-size: 1em;
+    text-align: center;
   }
 }
 
