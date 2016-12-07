@@ -1,5 +1,9 @@
 /*Main.html*/
 /*Nav Bar*/
+
+body{
+  font-family: 'Lato', sans-serif !important;
+}
 nav{
   font-family: 'Lato', sans-serif;
   font-weight: 300;
@@ -58,10 +62,6 @@ a:active{color: white;}
   font-weight: 300;
 }
 
-#reviews {
-  height: 50vh;
-  background-color: #e74c3c;
-}
 #reviews .carousel-slider {
   height: 50vh;
 }
@@ -69,7 +69,7 @@ a:active{color: white;}
   color: white;
 }
 #reviews .review-content {
-  padding-top: 10%;
+  padding-top: 7%;
 }
 #reviews p {
   width: 50em;
@@ -77,31 +77,38 @@ a:active{color: white;}
 }
 
 #section2 {
-  height: 100vh;
+  /*height: 100vh;*/
   background-color: #e67e22;
 }
 
 #section2 .slick-carousel{
-  top: 50%;
+  /*top: 50%;
   transform: translateY(-50%);
-  position: relative;
+  position: relative;*/
 }
 #section2 h3{
-  /*font-size:15px;*/
-  transform: rotate(350deg);
-  text-decoration: underline;
+  margin: 0px;
+  text-align: center;
   color: white; 
+  font-weight: 300;
 }
 
 #section3 {
-  height: 100vh;
+  /*height: 100vh;*/
   background-color: #2980b9;
 }
 
 #section3 .slick-carousel{
-  top: 50%;
+  /*top: 50%;
   transform: translateY(-50%);
-  position: relative;
+  position: relative;*/
+}
+
+#section3 h3{
+  margin: 0px;
+  text-align: center;
+  color: white; 
+  font-weight: 300;
 }
 
 /*Main.html end*/
@@ -142,6 +149,10 @@ a:active{color: white;}
   margin: 5px;
 }
 
+.newImage{
+  margin: 5px;
+}
+
 .productImage p, .newImage p {
   color:white;
   font-style: italic;
@@ -159,16 +170,31 @@ a:active{color: white;}
   text-align: center;
 }
 
+label{
+  font-weight: 300;
+}
+
+.contact-address{
+  font-weight: 300;
+}
+
+.contact-div{
+  /*font-family: 'Lato', sans-serif;*/
+  font-weight: 300;
+}
+
 .buy{
   margin-top: 20px;
   width:100%;
-  border: 2px solid black;
+  border: 2px dotted black;
 }
 .buy h5{
-    width:150px;
-    margin-top:-10px;
-    margin-left:5px;
-    background:white;
+/*  width: 10em;
+  margin-top: -10px;
+  margin-left: 12.3em;*/
+  background: white;
+  font-weight: 300;
+  text-align: center;
 }
 
 /*single product css*/
@@ -187,3 +213,41 @@ a:active{color: white;}
 .productDetail .buyProduct a{
   right:0;
 }
+
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #reviews .carousel-slider {
+    height: 50vh;
+  }
+  #reviews .carousel-fixed-item {
+    color: white;
+  }
+  #reviews .review-content {
+    padding-top: 20%;
+  }
+  #reviews p {
+    width: 24em;
+    margin: auto;
+  }
+
+  #section2{
+    display: none;
+  }
+
+  #section3{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .top-products-mobile{
+    display: none;
+  }
+  .new-products-mobile{
+    display: none;
+  }
+}
+
+

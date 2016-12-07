@@ -19,9 +19,7 @@ angular.module('abckidsworldApp')
     $scope.loadDetails = function(){
       var p = Promise.resolve(productService.buyProduct());
       p.then(function(res){
-        console.log(res.name);
-        $scope.detail.product = res.name;
-        console.log($scope.detail.product);
+        // $scope.detail.product = res.name;
       })
     }
 

@@ -31,32 +31,26 @@
     <!-- Add your site or application content here -->
     <div class="header">
       <div>
-
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#!" class="brand-logo" >
-          ABC Kids World
-        </a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="#" >
-              About Us</a></li>
+        <nav>
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo" >
+              ABC Kids World
+            </a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#">About Us</a></li>
               <li><a href="#/products">Products</a></li>
               <li><a href="#/contact">Contact Us</a></li>
               <li><a href="#">FAQ</a></li>
-          </ul>
-          <ul class="side-nav" id="mobile-demo">
-              <li><a href="#"  >
-                  About Us</a></li>
-                  <li><a href="#/products" >Products</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">FAQ</a></li>
-              </ul>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#/products" >Products</a></li>
+              <li><a href="#/contact">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
           </div>
-      </nav>
-
-
-    
+        </nav>
     </div> <!-- /#navigation13 -->
     </div>
 
@@ -128,7 +122,9 @@
     </script>
 
     <script>
-    $('.button-collapse').sideNav();
+      $(document).ready(function(){
+        $('.button-collapse').sideNav();
+      })
     </script>
 
 </body>

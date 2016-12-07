@@ -24,11 +24,19 @@ angular.module('abckidsworldApp')
           $scope.topProducts = myTopProduct;
           $scope.newProducts = myNewProduct;
         }, 1);
+        $timeout(function() {
+          $('.slider').slider({full_width: true, indicators: false});
+        }, 1);
       })
     }
 
     $scope.checkProduct = function(id){
         $location.url('/viewproduct/'+id);
     }
+    
+
+    $(document).ready(function(){
+      $('.slider').slider({full_width: true, indicators: false});
+    });
 
   });

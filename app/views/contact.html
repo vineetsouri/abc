@@ -1,13 +1,13 @@
-		<div class="container" ng-init="loadDetails()">
+		<div class="container contact-div" ng-init="loadDetails()">
 			<div class="row buy">
-				<h5>Product Buy</h5>
+				<h5>Ask Quotation</h5>
 				<form class="col s12" name="myForm" ng-submit="contactSubmit()">
 					<div class="row">
 						<div class="col s6">
 					<div class="input-field">
 						<i class="material-icons prefix">account_circle</i>
 						<input id="icon_prefix" name="myName" ng-model="detail.name" type="text" class="validate" required>
-						<label for="icon_prefix">First Name</label>
+						<label for="icon_prefix">Full Name</label>
 					</div>
 					<div class="input-field">
 						<i class="material-icons prefix">phone</i>
@@ -21,13 +21,6 @@
 					</div>
 						</div>
 						<div class="col s6">
-							product: {{detail.product}}
-							<!--<div class="input-field">
-								<i class="material-icons prefix">shopping_basket</i>
-								<input id="icon_prefix" name="product" ng-model="detail.product" type="text" class="validate">
-								<label for="icon_prefix">Product</label>
-							</div>-->
-
 							<div class="input-field ">
 										<i class="material-icons prefix">mode_edit</i>
 										<textarea id="icon_prefix2" class="materialize-textarea" ng-model="detail.description"></textarea>
@@ -44,7 +37,7 @@
 						
 			<div class="row">
 						<div class="col-md-6">
-						<h2>Contact Address</h2>
+						<h4 class="contact-address">Contact Address</h4>
 						<address>
 							Plot No.112/A<br>
 							Aleap Industrial Estate,<br>
