@@ -7,7 +7,7 @@ body{
 nav{
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  background-color: #433E3B;
+  background-color: #2A2924;
 }
 nav ul li a{
    text-decoration: none;
@@ -47,14 +47,6 @@ a:active{color: white;}
   text-align: center;
   color: #ecf0f1;
   font-weight: 100;
-}
-
-#welcome {
-  font-size: 3.5em;
-}
-
-#to {
-  font-size: 1.5em;
 }
 
 #company-name {
@@ -218,6 +210,9 @@ label{
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
+  #company-name {
+    font-size: 4em;
+  }
   #reviews .carousel-slider {
     height: 50vh;
   }
@@ -242,6 +237,7 @@ label{
 }
 
 @media only screen and (min-width: 800px) {
+
   .top-products-mobile{
     display: none;
   }

@@ -1,8 +1,8 @@
 <div class="main" ng-init="getSliderImages()">
   <div class="container-fluid main-container">
     <div class="row content">
-      <span id="welcome">Welcome</span> <br>
-      <span id="to">to</span><br>
+      <!-- <span id="welcome">Welcome</span> <br>
+      <span id="to">to</span><br> -->
       <span id="company-name">ABC KIDS WORLD</span>
     </div>
   </div>
@@ -12,7 +12,7 @@
         <li ng-repeat="product in newProducts">
           <img ng-src="{{product.imageUrl}}"> <!-- random image -->
           <div class="caption center-align">
-            <p style="font-size: 50px; font-weight: 100;">New Products</p>
+            <p style="font-size: 40px; font-weight: 100;">New Products</p>
             <h3>{{product.name}}</h3>
             <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
           </div>
@@ -27,7 +27,7 @@
         <li ng-repeat="product in topProducts">
           <img ng-src="{{product.imageUrl}}"> <!-- random image -->
           <div class="caption center-align">
-            <p style="font-size: 50px; font-weight: 100;">Top Products</p>
+            <p style="font-size: 40px; font-weight: 100;">Top Products</p>
             <h3>{{product.name}}</h3>
             <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
           </div>
