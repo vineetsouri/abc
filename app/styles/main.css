@@ -43,14 +43,14 @@ nav{
   font-family: 'Lato', sans-serif;
 }
 
-.main-container {
+/*.main-container {
   height: 90.3vh;
   width: 100%;
   background: url("../images/background.jpg") no-repeat center center fixed;
   background-size: cover;
-}
+}*/
 
-.content {
+/*.content {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -58,7 +58,7 @@ nav{
   text-align: center;
   color: #ecf0f1;
   font-weight: 100;
-}
+}*/
 
 #company-name {
   font-size: 5em;
@@ -93,7 +93,15 @@ nav{
 
 #section3 {
   /*height: 100vh;*/
-  background-color: #2980b9;
+  background-color: #2A2924;
+}
+
+#section3 .slick-prev{
+  left: 0px;
+}
+
+#section3 .slick-next{
+  right: 0px;
 }
 
 

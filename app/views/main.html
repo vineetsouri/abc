@@ -1,11 +1,9 @@
 <div class="main" ng-init="getSliderImages()">
-  <div class="container-fluid main-container">
+  <!-- <div class="container-fluid main-container">
     <div class="row content">
-      <!-- <span id="welcome">Welcome</span> <br>
-      <span id="to">to</span><br> -->
       <span id="company-name">ABC KIDS WORLD</span>
     </div>
-  </div>
+  </div> -->
   <section class="new-products-mobile">
     <div class="slider">
       <ul class="slides">
@@ -38,17 +36,19 @@
   </section>
   <section id="section3">
     <h3>New Products</h3>
-    <div class="container slick-carousel">
-      <slick dots=true infinite=true speed=300 autoplay=true slides-to-show=3 init-onload=true data="newProducts" touch-move=false slides-to-scroll=1 arrows=true>
-        <button type="button" class="slick-prev arrow_button">Previous</button>
-          <div ng-repeat="product in newProducts">
-            <span class="newImage">
-              <img ng-src="{{product.imageUrl}}" alt="{{product.name}}" style="height: 300px; width:300px" ng-click="checkProduct(product.$id)">
-              <p>{{product.name}}</p>
-            </span>
-          </div>
-        <button type="button" class="slick-next arrow_button">Next</button>
-      </slick>
+    <div class="container-fluid slick-carousel">
+      <div class="row">
+        <slick dots=true infinite=true speed=300 autoplay=true slides-to-show=1 init-onload=true data="newProducts" touch-move=false slides-to-scroll=1 arrows=true>
+          <button type="button" class="slick-prev arrow_button">Previous</button>
+            <!-- <div> -->
+              <span class="newImage" ng-repeat="product in newProducts">
+                <img class="img-responsive" ng-src="{{product.imageUrl}}" alt="{{product.name}}" style="height: 300px; margin: auto" ng-click="checkProduct(product.$id)">
+                <p>{{product.name}}</p>
+              </span>
+            <!-- </div> -->
+          <button type="button" class="slick-next arrow_button">Next</button>
+        </slick>
+      </div>
     </div>
   </section>
   <section id="section2">
