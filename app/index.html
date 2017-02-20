@@ -29,7 +29,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
+    <div class="header" ng-controller="ProductsCtrl">
       <div>
         <nav>
           <div class="nav-wrapper">
@@ -38,17 +38,29 @@
             </a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-              <li><a class="nav-anchor" href="#/about">About Us</a></li>
-              <li><a class="nav-anchor" href="#/products">Products</a></li>
-              <li><a class="nav-anchor" href="#/contact">Contact Us</a></li>
-              <li><a class="nav-anchor" href="#/faq">FAQ</a></li>
+              <li><a class="nav-anchor" href="#!/about">About Us</a></li>
+              <li class="dropdown">
+              <a id="dLabel" class="nav-anchor dropdown-toggle" data-toggle="dropdown">Products</a>
+
+                <!-- dropdown -->
+                <ul class='dropdown-menu' aria-labelledby="dLabel">
+                  <li ng-repeat="category in allCategories">
+                    <a ng-href="#!/products/{{category.$id}}">
+                      {{category.name}}
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="nav-anchor" href="#!/contact">Contact Us</a></li>
+              <li><a class="nav-anchor" href="#!/faq">FAQ</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
-              <li><a class="nav-anchor mobile-links" href="#/about">About Us</a></li>
-              <li><a class="nav-anchor mobile-links" href="#/products" >Products</a></li>
-              <li><a class="nav-anchor mobile-links" href="#/contact">Contact Us</a></li>
-              <li><a class="nav-anchor mobile-links" href="#/faq">FAQ</a></li>
+              <li><a class="nav-anchor mobile-links" href="#!/about">About Us</a></li>
+              <li><a class="nav-anchor mobile-links" href="#!/products" >Products</a></li>
+              <li><a class="nav-anchor mobile-links" href="#!/contact">Contact Us</a></li>
+              <li><a class="nav-anchor mobile-links" href="#!/faq">FAQ</a></li>
             </ul>
+
           </div>
         </nav>
     </div> <!-- /#navigation13 -->
@@ -104,6 +116,7 @@
         <script src="scripts/controllers/viewproduct.js"></script>
         <script src="scripts/directives/ngelevatezoom.js"></script>
         <script src="scripts/controllers/contact.js"></script>
+        <script src="scripts/controllers/faq.js"></script>
         <!-- endbuild -->
     <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
     <script src="bower_components/angular-slick/dist/slick.js"></script>
@@ -127,8 +140,8 @@
           closeOnClick: true,
           draggable: true 
         });
+        $('.dropdown-toggle').dropdown()
       })
     </script>
-
 </body>
 </html>

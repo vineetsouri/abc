@@ -8,30 +8,24 @@
  * Controller of the abckidsworldApp
  */
 angular.module('abckidsworldApp')
-  .controller('ProductsCtrl', function ($scope, productService, $location) {
-    $scope.loaded = true;
+  .controller('ProductsCtrl', function ($scope, productService, $location, $routeParams) {
     var products = productService.getProducts().$loaded();
     products.then(function(data){
       $scope.myProducts = data;
+      $scope.categoryProducts = $scope.myProducts.filter(function(value){
+        return value.myCategories === category_id;
+      });
     });
     $scope.viewProduct = function(id){
       $location.url('/viewproduct/'+id);
     };
 
-    $scope.getCategories = function(){
       var p = productService.getCategories().$loaded();
 
       p.then(function(data){
+        console.log(data)
         $scope.allCategories = data;
       });
-    }
 
-    $scope.categoryClicked = function(category){
-      $scope.clickedCategory = category.name;
-      var category_id = category.$id
-      $scope.loaded = false;
-      $scope.categoryProducts = $scope.myProducts.filter(function(value){
-        return value.myCategories === category_id;
-      });
-    };
+      var category_id = $routeParams.id;
   });

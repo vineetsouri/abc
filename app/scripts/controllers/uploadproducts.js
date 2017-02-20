@@ -41,6 +41,8 @@ angular.module('abckidsworldApp')
       myCategories: '',
       imageUrl: '',
       image_publicId: '',
+      product_code:'',
+      dimensions:'',
       topProduct: 'false',
       newProduct: 'false'
     };
@@ -54,6 +56,8 @@ angular.module('abckidsworldApp')
           myCategories: '',
           imageUrl: '',
           image_publicId: '',
+          product_code:'',
+          dimensions:'',
           topProduct: 'false',
           newProduct: 'false'
         };

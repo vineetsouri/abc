@@ -15,14 +15,19 @@ angular.module('abckidsworldApp')
 
       //Will watch for changes on the attribute
       attrs.$observe('zoomImage',function(){
-        linkElevateZoom();
+          linkElevateZoom();
       })
       
       function linkElevateZoom(){
         //Check if its not empty
         if (!attrs.zoomImage) return;
         element.attr('data-zoom-image',attrs.zoomImage);
-        $(element).elevateZoom();
+        $(element).elevateZoom({
+          scrollZoom : true,
+          zoomWindowWidth:400,
+          zoomWindowHeight:400,
+          responsive: true
+        });
       }
       
       linkElevateZoom();

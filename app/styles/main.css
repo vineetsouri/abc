@@ -11,6 +11,10 @@ nav{
   background-color: #2A2924;
 }
 
+.dropdown-menu >li > a{
+  text-transform: capitalize;
+}
+
 .nav-anchor, nav-anchor:hover, nav-anchor:active, nav-anchor:visited {
   text-decoration: none !important;
   color: white !important;
@@ -196,14 +200,24 @@ label{
   position: relative;
 }
 .productDetail .buyProduct{
-  position: absolute;
-  bottom: 0;
+  /*position: relative;*/
+  /*bottom: 0;*/
 }
 .productDetail .buyProduct a{
   right:0;
 }
 
+.faq-heading{
+  text-align: center;
+}
 
+.faq-heading h2{
+  font-weight: 100;
+}
+
+.collapsible-header{
+  color: #E74C3C;
+}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */

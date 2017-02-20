@@ -43,7 +43,7 @@ angular
         templateUrl: 'views/remove.html',
         controller: 'RemoveCtrl'
       })
-      .when('/products', {
+      .when('/products/:id', {
         templateUrl: 'views/products.html',
         controller: 'ProductsCtrl'
       })
@@ -55,12 +55,17 @@ angular
         templateUrl: 'views/contact.html',
         controller: 'ContactCtrl'
       })
+      .when('/faq', {
+        templateUrl: 'views/faq.html',
+        controller: 'FaqCtrl',
+        controllerAs: 'faq'
+      })
       .otherwise({
         redirectTo: '/'
       });
   })
   .config(['cloudinaryProvider', function (cloudinaryProvider) {
   cloudinaryProvider
-      .set("cloud_name", "rakeshschool")
+      .set("cloud_name", "abckidsworld")
       .set("upload_preset", "abckidsworld");
   }]);

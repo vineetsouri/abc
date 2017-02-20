@@ -1,15 +1,13 @@
-<div class="row products-page" ng-init="getCategories()">
+<div class="row products-page">
   <h2 class="products-heading">Products</h2>
-  <div class="col s12 m12">
-    <!-- Dropdown Trigger -->
+  <!-- <div class="col s12 m12">
     <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1'>Select a Category</a>
-    <!-- Dropdown Structure -->
     <ul id='dropdown1' class='dropdown-content'>
       <li ng-repeat="category in allCategories"><a ng-click="categoryClicked(category)">{{category.name}}</a></li>
     </ul>
-  </div>
-  <div class="row">
-    <div id="default" ng-if="loaded">
+  </div> -->
+  <!-- <div class="row">
+    <div id="default">
       <div style="font-size: 1.5em;">Showing all the products</div>
       <div class="col s12 m4" ng-repeat="product in myProducts">
         <div class="card large">
@@ -26,8 +24,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div id="test1" class="col s12"  ng-if="!loaded">
+    </div> -->
+    <div id="test1" class="col s12">
       <div style="font-size: 1.5em;">Showing products for category: {{clickedCategory}}</div>
       <div class="col s12 m4" ng-repeat="product in categoryProducts">
         <div class="card large">
@@ -47,7 +45,7 @@
     </div>
   </div>
 </div>
-<script>
+<!-- <script>
   $('ul.tabs').tabs();
   $('.dropdown-button').dropdown({
       inDuration: 300,
@@ -59,4 +57,4 @@
       alignment: 'center' // Displays dropdown with edge aligned to the left of button
     }
   );
-</script>
+</script> -->

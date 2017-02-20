@@ -7,8 +7,8 @@
         <div class=" col-md-5 productDetail">
             <h4>{{detail.name}}</h4>
 
-            <p>{{detail.description}}</p>
-
+            <p><b><i>Description:</i></b> {{detail.description}}</p>
+            <p><b><i>Dimensions:</i></b> {{detail.dimensions}}</p>
             <div class="buyProduct">
                 <h5>Price: &#8377; {{detail.price}}</h5>
                 <a class="waves-effect waves-light btn" ng-click="buyProduct(detail.$id)"><i class="material-icons left">shopping_basket</i>Buy</a
