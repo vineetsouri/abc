@@ -24,21 +24,17 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-offset-4 col-md-7">
+    <div class="col-md-12">
       <form ng-submit="updateProduct()">
-        <div class="row">
-            <div class="col-md-4">
-                <md-input-container>
-                <label>Name</label>
-                <input ng-model="details.name">
+        <div layout-gt-sm="row">
+              <md-input-container class="md-block" flex-gt-sm>
+                  <label>Name</label>
+                  <input ng-model="details.name">
               </md-input-container>
-            </div>
-            <div class="col-md-8">
-                <md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
                 <label>Description</label>
                 <textarea name="" ng-model='details.description'></textarea>
               </md-input-container>
-            </div>
         </div>
         <div class="row">
             <div class="col-md-4">
@@ -56,8 +52,8 @@
                 <md-input-container>
                     <label>TopProducts</label>
                     <md-select ng-model="details.topProduct">
-                        <md-option>true</md-option>
-                        <md-option>false</md-option>
+                        <md-option ng-value="true">true</md-option>
+                        <md-option ng-value="false">false</md-option>
                     </md-select>
                 </md-input-container>
             </div>
@@ -65,8 +61,8 @@
                 <md-input-container>
                     <label>NewProducts</label>
                     <md-select ng-model="details.newProduct">
-                        <md-option>true</md-option>
-                        <md-option>false</md-option>
+                        <md-option ng-value="true">true</md-option>
+                        <md-option ng-value="false">false</md-option>
                     </md-select>
                 </md-input-container>
             </div>

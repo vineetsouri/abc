@@ -39,7 +39,7 @@ angular
         templateUrl: 'views/uploadproducts.html',
         controller: 'UploadproductsCtrl'
       })
-      .when('/abckidsworld/remove', {
+      .when('/abckidsworld/edit', {
         templateUrl: 'views/remove.html',
         controller: 'RemoveCtrl'
       })

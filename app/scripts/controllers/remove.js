@@ -22,12 +22,12 @@ angular.module('abckidsworldApp')
 
     $scope.categoryChange = function(value){
       $scope.listProducts = [];
+          $scope.details.imageUrl = "";
       $scope.products.forEach(function(product){
 
         if(product.myCategories == value){
           $scope.listProducts.push(product);
           $scope.details = {};
-          $scope.details.imageUrl = "";
         }
       });
     }

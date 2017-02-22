@@ -1,31 +1,32 @@
 		<div class="container contact-div" ng-init="loadDetails()">
 			<div class="row buy">
 				<h5>Ask Quotation</h5>
-				<form class="col s12" name="myForm" ng-submit="contactSubmit()">
+				<form class="col s12" name="myForm" action="https://formspree.io/rakesh@codeastra.com"
+      method="POST" ng-submit="contactSubmit()">
 					<div class="row">
 						<div class="col s6">
 					<div class="input-field">
 						<i class="material-icons prefix">account_circle</i>
-						<input id="icon_prefix" name="myName" ng-model="detail.name" type="text" class="validate" required>
+						<input id="icon_prefix" name="Name" ng-model="detail.name" type="text" class="validate" required>
 						<label for="icon_prefix">Full Name</label>
 					</div>
 					<div class="input-field">
 						<i class="material-icons prefix">phone</i>
-						<input id="icon_telephone" name="phone" type="tel" ng-model="detail.phone" class="validate" required>
+						<input id="icon_telephone" name="Phone" type="tel" ng-model="detail.phone" class="validate" required>
 						<label for="icon_telephone">Telephone</label>
 					</div>
 					<div class="input-field">
 						<i class="material-icons prefix">email</i>
-						<input id="email" type="email" name="email" ng-model="detail.email" class="validate" required>
+						<input id="email" type="email" name="Email" ng-model="detail.email" class="validate" required>
 						<label for="email" data-error="wrong" data-success="right">Email</label>
 					</div>
 						</div>
 						<div class="col s6">
 							<div class="input-field ">
 										<i class="material-icons prefix">mode_edit</i>
-										<textarea id="icon_prefix2" class="materialize-textarea" ng-model="detail.description"></textarea>
+										<textarea id="icon_prefix2" class="materialize-textarea" name="Description" ng-model="detail.description"></textarea>
 										<label for="icon_prefix2">Description</label>
-								<button class="btn waves-effect waves-light" ng-disabled="myForm.$invalid" type="submit" value="submit" name="action" style="float:right">Submit
+								<button class="btn waves-effect waves-light" ng-disabled="myForm.$invalid" type="submit" value="Send" name="action" style="float:right">Submit
 								<i class="material-icons right">send</i>
 								</button>
 							</div>
