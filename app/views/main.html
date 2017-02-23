@@ -10,7 +10,7 @@
         <li ng-repeat="product in newProducts">
           <img ng-src="{{product.imageUrl}}"> <!-- random image -->
           <div class="caption center-align">
-            <p style="font-size: 40px; font-weight: 100;">New Products</p>
+            <!-- <p style="font-size: 40px; font-weight: 100;">New Products</p> -->
             <h3>{{product.name}}</h3>
             <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
           </div>
@@ -25,7 +25,7 @@
         <li ng-repeat="product in topProducts">
           <img ng-src="{{product.imageUrl}}"> <!-- random image -->
           <div class="caption center-align">
-            <p style="font-size: 40px; font-weight: 100;">Top Products</p>
+            <!-- <p style="font-size: 40px; font-weight: 100;">Top Products</p> -->
             <h3>{{product.name}}</h3>
             <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
           </div>
@@ -36,18 +36,32 @@
   </section>
   <section id="section3">
     <h3>New Products</h3>
-    <div class="container-fluid slick-carousel">
-      <div class="row">
-        <slick dots=true infinite=true speed=300 autoplay=true slides-to-show=1 init-onload=true data="newProducts" touch-move=false slides-to-scroll=1 arrows=true>
-          <button type="button" class="slick-prev arrow_button">Previous</button>
-            <!-- <div> -->
-              <span class="newImage" ng-repeat="product in newProducts">
-                <img class="img-responsive" ng-src="{{product.imageUrl}}" alt="{{product.name}}" style="height: 300px; margin: auto" ng-click="checkProduct(product.$id)">
-                <p>{{product.name}}</p>
-              </span>
-            <!-- </div> -->
-          <button type="button" class="slick-next arrow_button">Next</button>
-        </slick>
+    <div>
+       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li ng-repeat="product in newProducts" data-target="#carousel-example-generic" data-slide-to="{{$index}}" ng-class="{active:!$index}"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item" ng-class="{active:!$index}"  ng-repeat="product in newProducts">
+            <img ng-src="{{product.imageUrl}}" alt="{{product.name}}">
+            <div class="carousel-caption">
+              {{product.name}}
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     </div>
   </section>
@@ -58,7 +72,7 @@
         <button type="button" class="slick-prev arrow_button">Previous</button>
         <div ng-repeat="product in topProducts">
           <span class="productImage">
-            <img ng-src="{{product.imageUrl}}" alt="{{product.name}}" style="height: 300px; width:300px" ng-click="checkProduct(product.$id)">
+            <!-- <img ng-src="{{product.imageUrl}}" alt="{{product.name}}" style="height: 300px; width:300px" ng-click="checkProduct(product.$id)"> -->
             <p>{{product.name}}</p>
           </span>
         </div>
@@ -91,7 +105,7 @@
   </section>
 </div>
 
-<script>
-  $('.carousel-slider').carousel({time_constant: 200, full_width: true});
+<script>  
+  $('.carousel').carousel()
 </script>
 
