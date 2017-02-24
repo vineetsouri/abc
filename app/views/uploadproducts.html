@@ -41,7 +41,7 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <div href="#" class="upload_button" ngf-select="uploadFiles($files)" multiple title="upload" resetOnClick="true" >Upload</div>
+                <div href="#" class="upload_button" ngf-select="uploadProduct($files)" multiple title="upload" resetOnClick="true" >Upload</div>
             </div>
         </div>
         <div class="row">
@@ -62,10 +62,13 @@
                 <md-input-container>
                     <label>TopProducts</label>
                     <md-select ng-model="details.topProduct">
-                        <md-option ng-value="true">true</md-option>
-                        <md-option ng-value="false">false</md-option>
+                        <md-option ng-value="'true'">true</md-option>
+                        <md-option ng-value="'false'">false</md-option>
                     </md-select>
                 </md-input-container>
+            </div>
+            <div class="col-md-4" ng-if="details.topProduct == 'true'">
+                <div href="#" class="upload_button" ngf-select="uploadTopProduct($files)" multiple title="upload" resetOnClick="true" >Upload</div>
             </div>
         </div>
         <div class="row">
@@ -73,10 +76,13 @@
                 <md-input-container>
                     <label>NewProducts</label>
                     <md-select ng-model="details.newProduct">
-                        <md-option ng-value="true">true</md-option>
-                        <md-option ng-value="false">false</md-option>
+                        <md-option ng-value="'true'">true</md-option>
+                        <md-option ng-value="'false'">false</md-option>
                     </md-select>
                 </md-input-container>
+            </div>
+            <div class="col-md-4" ng-if="details.newProduct == 'true'">
+                <div href="#" class="upload_button" ngf-select="uploadNewProduct($files)" multiple title="upload" resetOnClick="true" >Upload</div>
             </div>
         </div>
         <input ng-disabled="checkImage" type="submit" class="btn btn-success" value="Submit" />

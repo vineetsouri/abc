@@ -56,7 +56,18 @@
             </ul>
             <ul class="side-nav" id="mobile-demo">
               <li><a class="nav-anchor mobile-links" href="#/about">About Us</a></li>
-              <li><a class="nav-anchor mobile-links" href="#/products" >Products</a></li>
+              <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">Products</a>
+
+                <!-- dropdown -->
+                <ul class='dropdown-menu'>
+                  <li ng-repeat="category in allCategories">
+                    <a ng-href="#/products/{{category.$id}}">
+                      {{category.name}}
+                    </a>
+                  </li>
+                </ul>
+              </li>
               <li><a class="nav-anchor mobile-links" href="#/contact">Contact Us</a></li>
               <li><a class="nav-anchor mobile-links" href="#/faq">FAQ</a></li>
             </ul>
@@ -67,6 +78,12 @@
     </div>
 
     <div ng-view=""></div>
+      
+    <div class="footer">
+      <div class="footer-data">
+        <p>tabs</p>
+      </div>
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
