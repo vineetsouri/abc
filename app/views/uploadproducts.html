@@ -61,7 +61,7 @@
             <div class="col-md-4">
                 <md-input-container>
                     <label>TopProducts</label>
-                    <md-select ng-model="details.topProduct">
+                    <md-select ng-model="details.topProduct" ng-change="CheckUploadImage(details.topProduct)">
                         <md-option ng-value="'true'">true</md-option>
                         <md-option ng-value="'false'">false</md-option>
                     </md-select>
@@ -75,7 +75,7 @@
             <div class="col-md-4">
                 <md-input-container>
                     <label>NewProducts</label>
-                    <md-select ng-model="details.newProduct">
+                    <md-select ng-model="details.newProduct" ng-change="CheckUploadImage(details.newProduct)">
                         <md-option ng-value="'true'">true</md-option>
                         <md-option ng-value="'false'">false</md-option>
                     </md-select>

@@ -12,7 +12,7 @@ angular.module('abckidsworldApp')
     $scope.categories = productService.getCategories();
     $scope.checkImage = true;
 
-    $scope.uploadFiles = function(files,image,checkImage,imageId){
+    $scope.uploadProduct = function(files){
       $scope.files = files;
       if (!$scope.files) {return}
       angular.forEach(files, function(file){
@@ -24,9 +24,9 @@ angular.module('abckidsworldApp')
               file: file
             }
           }).success(function (data, status, headers, config) {
-            image = data.url;
-            imageId = data.public_id;
-            checkImage = false;
+            $scope.details.imageUrl = data.url;
+            $scope.details.image_publicId = data.public_id;
+            $scope.checkImage = false;
           }).error(function (data, status, headers, config) {
             file.result = data;
           });
@@ -49,16 +49,55 @@ angular.module('abckidsworldApp')
       newProduct: 'false'
     };
 
-    $scope.uploadProduct = function(file){
-      $scope.uploadFiles(file,$scope.details.imageUrl,$scope.checkImage,$scope.details.image_publicId);
+    $scope.uploadTopProduct = function(files){
+       $scope.files = files;
+      if (!$scope.files) {return}
+      angular.forEach(files, function(file){
+        if (file && !file.$error) {
+          file.upload = Upload.upload({
+            url: "https://api.cloudinary.com/v1_1/" + cloudinary.config().cloud_name + "/upload",
+            data: {
+              upload_preset: cloudinary.config().upload_preset,
+              file: file
+            }
+          }).success(function (data, status, headers, config) {
+            $scope.details.topProductImage = data.url;
+            $scope.checkImage = false;
+          }).error(function (data, status, headers, config) {
+            file.result = data;
+          });
+        }
+      });
     }
 
-    $scope.uploadTopProduct = function(file){
-      $scope.uploadFiles(file,$scope.details.topProductImage,$scope.checkImage);
+    $scope.uploadNewProduct = function(files){
+      $scope.files = files;
+      if (!$scope.files) {return}
+      angular.forEach(files, function(file){
+        if (file && !file.$error) {
+          file.upload = Upload.upload({
+            url: "https://api.cloudinary.com/v1_1/" + cloudinary.config().cloud_name + "/upload",
+            data: {
+              upload_preset: cloudinary.config().upload_preset,
+              file: file
+            }
+          }).success(function (data, status, headers, config) {
+            $scope.details.newProductImage = data.url;
+            $scope.checkImage = false;
+          }).error(function (data, status, headers, config) {
+            file.result = data;
+          });
+        }
+      });
     }
 
-    $scope.uploadNewProduct = function(file){
-      $scope.uploadFiles(file,$scope.details.newProductImage,$scope.checkImage);
+    $scope.CheckUploadImage = function(val){
+      console.log(val);
+      if(val == 'true'){
+        $scope.checkImage = true;
+      } else{
+        $scope.checkImage = false;
+      }
     }
 
     $scope.details = productService.product();

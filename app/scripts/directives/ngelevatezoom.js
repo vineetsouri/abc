@@ -25,11 +25,13 @@ angular.module('abckidsworldApp')
         $(element).elevateZoom({
           scrollZoom : true,
           zoomWindowWidth:400,
-          zoomWindowHeight:400,
-          responsive: true
+          zoomWindowHeight:400
         });
       }
-      
+      element.on('$destroy', function() {
+        $.removeData(attrs.zoomImage, 'elevateZoom');
+        $('.zoomContainer').remove();
+      });
       linkElevateZoom();
 
     }

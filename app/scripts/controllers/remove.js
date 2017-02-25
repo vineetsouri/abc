@@ -50,8 +50,8 @@ angular.module('abckidsworldApp')
       image_publicId: '',
       product_code:'',
       dimensions:'',
-      topProduct: 'false',
-      newProduct: 'false'
+      topProduct: '',
+      newProduct: ''
     }
 
     $scope.updateProduct = function(){
