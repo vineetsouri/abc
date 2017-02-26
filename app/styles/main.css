@@ -43,7 +43,7 @@ nav{
 /*Nav Bar End*/
 
 .main {
-  height: 100vh;
+  /*height: 100vh;*/
   font-family: 'Lato', sans-serif;
 }
 
@@ -114,6 +114,10 @@ nav{
   text-align: center;
   color: white; 
   font-weight: 300;
+}
+
+.page-footer {
+  margin: 0px !important;
 }
 
 /*Main.html end*/
