@@ -64,6 +64,10 @@ angular
         redirectTo: '/'
       });
       $locationProvider.hashPrefix('');
+      $locationProvider.html5Mode({
+        enabled: true,
+        // requireBase: false
+      });
   })
   .config(['cloudinaryProvider', function (cloudinaryProvider) {
   cloudinaryProvider
