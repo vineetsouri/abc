@@ -23,7 +23,6 @@ angular.module('abckidsworldApp')
     p.then(function(val){
       $scope.detail = val;
       var image = val.imageUrl;
-      console.log(image);
       $scope.smallImage = image.substring(0,52)+ 'w_450,h_400/'+image.substring(52);
     })
     

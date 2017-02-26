@@ -42,7 +42,7 @@
           <button type="button" class="slick-prev arrow_button">Previous</button>
             <div ng-repeat="product in newProducts">
               <span class="newImage">
-                <img class="img-responsive" ng-src="{{product.imageUrl}}" alt="{{product.name}}" style="height: 350px; width: 1200px; margin: auto" ng-click="checkProduct(product.$id)">
+                <img class="img-responsive" ng-src="{{product.newProductImage}}" alt="{{product.name}}" style="height: 350px; width: 1200px; margin: auto" ng-click="checkProduct(product.$id)">
                 <p>{{product.name}}</p>
               </span>
             </div>
@@ -58,7 +58,7 @@
         <button type="button" class="slick-prev arrow_button">Previous</button>
         <div ng-repeat="product in topProducts">
           <span class="productImage">
-            <img ng-src="{{product.imageUrl}}" alt="{{product.name}}" style="height: 300px; width:300px" ng-click="checkProduct(product.$id)">
+            <img ng-src="{{product.topProductImage}}" alt="{{product.name}}" style="height: 300px; width:300px" ng-click="checkProduct(product.$id)">
             <p>{{product.name}}</p>
           </span>
         </div>
@@ -94,4 +94,3 @@
 <script>
   $('.carousel-slider').carousel({time_constant: 200, full_width: true});
 </script>
-
