@@ -11,6 +11,10 @@ nav{
   background-color: #2A2924;
 }
 
+.side-menu-caret{
+  float: right !important;
+}
+
 .dropdown-menu >li > a{
   text-transform: capitalize;
 }

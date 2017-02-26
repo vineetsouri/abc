@@ -56,11 +56,26 @@
             </ul>
             <ul class="side-nav" id="mobile-demo">
               <li><a class="nav-anchor mobile-links" href="#/about">About Us</a></li>
-              <li><a class="nav-anchor mobile-links" href="#/products" >Products</a></li>
+              <!-- <li><a class="nav-anchor mobile-links" href="#/products" >Products</a></li> -->
+              <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                  <li>
+                  <a class="collapsible-header">Products<i class="material-icons side-menu-caret">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                      <ul>
+                        <li ng-repeat="category in allCategories">
+                          <a ng-href="#/products/{{category.$id}}">
+                            {{category.name}}
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
               <li><a class="nav-anchor mobile-links" href="#/contact">Contact Us</a></li>
               <li><a class="nav-anchor mobile-links" href="#/faq">FAQ</a></li>
             </ul>
-
           </div>
         </nav>
       </div> <!-- /#navigation13 -->
