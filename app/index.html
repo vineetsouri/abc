@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <base href="/">
+    <!-- <base href="/"> -->
     <meta charset="utf-8">
     <title>ABC Kids World</title>
     <meta name="description" content="">
@@ -36,30 +36,30 @@
       <div>
         <nav>
           <div class="nav-wrapper">
-            <a class="nav-anchor brand-logo" href="/">
+            <a class="nav-anchor brand-logo" href="#/">
               ABC Kids World
             </a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-              <li><a class="nav-anchor" href="/about">About Us</a></li>
+              <li><a class="nav-anchor" href="#/about">About Us</a></li>
               <li class="dropdown">
                 <a id="dLabel" class="nav-anchor dropdown-toggle" data-toggle="dropdown">Products</a>
 
                 <!-- dropdown -->
                 <ul class='dropdown-menu' aria-labelledby="dLabel">
                   <li ng-repeat="category in allCategories">
-                    <a ng-href="/products/{{category.$id}}">
+                    <a ng-href="#/products/{{category.$id}}">
                       {{category.name}}
                     </a>
                   </li>
                 </ul>
               </li>
-              <li><a class="nav-anchor" href="/contact">Contact Us</a></li>
-              <li><a class="nav-anchor" href="/faq">FAQ</a></li>
+              <li><a class="nav-anchor" href="#/contact">Contact Us</a></li>
+              <li><a class="nav-anchor" href="#/faq">FAQ</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
-              <li><a class="nav-anchor mobile-links" href="/about">About Us</a></li>
-              <!-- <li><a class="nav-anchor mobile-links" href="/products" >Products</a></li> -->
+              <li><a class="nav-anchor mobile-links" href="#/about">About Us</a></li>
+              <!-- <li><a class="nav-anchor mobile-links" href="#/products" >Products</a></li> -->
               <li class="no-padding">
                 <ul class="collapsible collapsible-accordion">
                   <li>
@@ -67,7 +67,7 @@
                     <div class="collapsible-body">
                       <ul>
                         <li ng-repeat="category in allCategories">
-                          <a ng-href="/products/{{category.$id}}">
+                          <a ng-href="#/products/{{category.$id}}">
                             {{category.name}}
                           </a>
                         </li>
@@ -76,8 +76,8 @@
                   </li>
                 </ul>
               </li>
-              <li><a class="nav-anchor mobile-links" href="/contact">Contact Us</a></li>
-              <li><a class="nav-anchor mobile-links" href="/faq">FAQ</a></li>
+              <li><a class="nav-anchor mobile-links" href="#/contact">Contact Us</a></li>
+              <li><a class="nav-anchor mobile-links" href="#/faq">FAQ</a></li>
             </ul>
           </div>
         </nav>
@@ -94,9 +94,9 @@
                 <div class="nav-wrapper">
                   <a href="#" class="right"></a>
                   <ul id="nav-mobile" class="left hide-on-med-and-down">
-                    <li><a class="nav-anchor" href="/about">About Us</a></li>
-                    <li><a class="nav-anchor" href="/contact">Contact Us</a></li>
-                    <li><a class="nav-anchor" href="/faq">FAQ</a></li>
+                    <li><a class="nav-anchor" href="#/about">About Us</a></li>
+                    <li><a class="nav-anchor" href="#/contact">Contact Us</a></li>
+                    <li><a class="nav-anchor" href="#/faq">FAQ</a></li>
                     
                   </ul>
                 </div>
