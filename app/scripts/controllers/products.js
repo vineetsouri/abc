@@ -23,7 +23,6 @@ angular.module('abckidsworldApp')
       var p = productService.getCategories().$loaded();
 
       p.then(function(data){
-        console.log(data)
         $scope.allCategories = data;
       });
 

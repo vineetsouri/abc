@@ -1,39 +1,4 @@
 <div class="main" ng-init="getSliderImages()">
-  <!-- <div class="container-fluid main-container">
-    <div class="row content">
-      <span id="company-name">ABC KIDS WORLD</span>
-    </div>
-  </div> -->
-  <section class="new-products-mobile">
-    <div class="slider">
-      <ul class="slides">
-        <li ng-repeat="product in newProducts">
-          <img ng-src="{{product.imageUrl}}"> <!-- random image -->
-          <div class="caption center-align">
-            <p style="font-size: 40px; font-weight: 100;">New Products</p>
-            <h3>{{product.name}}</h3>
-            <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
-          </div>
-        </li>
-        
-      </ul>
-    </div>
-  </section>
-  <section class="top-products-mobile">
-    <div class="slider">
-      <ul class="slides">
-        <li ng-repeat="product in topProducts">
-          <img ng-src="{{product.imageUrl}}"> <!-- random image -->
-          <div class="caption center-align">
-            <p style="font-size: 40px; font-weight: 100;">Top Products</p>
-            <h3>{{product.name}}</h3>
-            <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
-          </div>
-        </li>
-        
-      </ul>
-    </div>
-  </section>
   <section id="section3">
     <!-- <h3>New Products</h3> -->
     <div class="container-fluid slick-carousel">
@@ -58,7 +23,22 @@
         <button type="button" class="slick-prev arrow_button">Previous</button>
         <div ng-repeat="product in topProducts">
           <span class="productImage">
-            <img ng-src="{{product.topProductImage}}" alt="{{product.name}}" style="height: 300px; width:300px" ng-click="checkProduct(product.$id)">
+            <img ng-src="{{product.topProductImage}}" alt="{{product.name}}" style="height: 300px; width:280px" ng-click="checkProduct(product.$id)">
+            <p>{{product.name}}</p>
+          </span>
+        </div>
+        <button type="button" class="slick-next arrow_button">Next</button>
+      </slick>
+    </div>
+  </section>
+  <section id="Mobile">
+    <h3>Top Products</h3>
+    <div class="container slick-carousel">
+      <slick dots=true infinite=true speed=300 autoplay=true slides-to-show=1 init-onload=true data="topProducts" touch-move=true slides-to-scroll=1 arrows=true>
+        <button type="button" class="slick-prev arrow_button">Previous</button>
+        <div ng-repeat="product in topProducts">
+          <span class="productImage">
+            <img class="img-responsive top-image" ng-src="{{product.topProductImage}}" alt="{{product.name}}" style="height: 300px; width:300px" ng-click="checkProduct(product.$id)">
             <p>{{product.name}}</p>
           </span>
         </div>

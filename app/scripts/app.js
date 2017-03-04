@@ -66,7 +66,8 @@ angular
       $locationProvider.hashPrefix('');
       // $locationProvider.html5Mode({
       //   enabled: true,
-      //   // requireBase: false
+      //   requireBase: true,
+      //   rewriteLinks: true
       // });
   })
   .config(['cloudinaryProvider', function (cloudinaryProvider) {

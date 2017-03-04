@@ -47,23 +47,6 @@ nav{
   font-family: 'Lato', sans-serif;
 }
 
-/*.main-container {
-  height: 90.3vh;
-  width: 100%;
-  background: url("../images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-}*/
-
-/*.content {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 1px solid transparent;
-  text-align: center;
-  color: #ecf0f1;
-  font-weight: 100;
-}*/
-
 #company-name {
   font-size: 5em;
   font-weight: 300;
@@ -118,6 +101,10 @@ nav{
 
 .page-footer {
   margin: 0px !important;
+}
+
+.footer-icons{
+  margin-left: 25px;
 }
 
 /*Main.html end*/
@@ -179,6 +166,10 @@ nav{
   text-align: center;
 }
 
+.top-image{
+  margin: auto;
+}
+
 label{
   font-weight: 300;
 }
@@ -190,6 +181,10 @@ label{
 .contact-div{
   /*font-family: 'Lato', sans-serif;*/
   font-weight: 300;
+}
+
+.buy-button{
+  position: inherit;
 }
 
 .buy{
@@ -258,9 +253,18 @@ label{
     display: none;
   }
 
-  #section3{
-    display: none;
+  #Mobile {
+    /*height: 100vh;*/
+    background-color: #e67e22;
   }
+
+  #Mobile h3{
+    margin: 0px;
+    text-align: center;
+    color: white; 
+    font-weight: 300;
+  }
+
   .about-abc{
     font-weight: 300;
     font-size: 1em;
@@ -270,10 +274,7 @@ label{
 
 @media only screen and (min-width: 800px) {
 
-  .top-products-mobile{
-    display: none;
-  }
-  .new-products-mobile{
+  #Mobile{
     display: none;
   }
 }
