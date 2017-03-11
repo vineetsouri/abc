@@ -20,10 +20,12 @@ angular.module('abckidsworldApp')
         myNewProduct = data.filter(function(val){
           return val.newProduct === "true";
         });
+
         $timeout(function() {
           $scope.topProducts = myTopProduct;
           $scope.newProducts = myNewProduct;
         }, 1);
+
         $timeout(function() {
           $('.slider').slider({full_width: true, indicators: false});
         }, 1);
@@ -40,3 +42,5 @@ angular.module('abckidsworldApp')
     });
 
   });
+
+

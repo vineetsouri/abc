@@ -77,7 +77,8 @@ nav{
   margin: 0px;
   padding-top: 15px;
   /*text-align: center;*/
-  color: white; 
+  color: white;
+  font-size: 35px;
   font-weight: 300;
 }
 
@@ -232,6 +233,22 @@ label{
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
+  #section3Mobile {
+    /*height: 100vh;*/
+    background-color: #2A2924;
+  }
+
+  #section3Mobile .slick-prev{
+    left: 0px;
+  }
+
+  #section3Mobile .slick-next{
+    right: 0px;
+  }
+
+  #section3{
+    display: none;
+  }
   #company-name {
     font-size: 4em;
   }
@@ -263,6 +280,7 @@ label{
     padding-top: 15px;
     /*text-align: center;*/
     color: white; 
+    font-size: 25px;
     font-weight: 300;
   }
 
@@ -283,6 +301,10 @@ label{
     display: none;
   }
   .product-mobile-view{
+    display: none;
+  }
+
+  #section3Mobile {
     display: none;
   }
 }
