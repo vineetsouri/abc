@@ -1,8 +1,8 @@
 
-<div class="container">
+<div class="container product-laptop-view">
   <div class="row detailProduct">
     <div class="col-md-7">
-      <img ng-elevate-zoom zoom-image="{{detail.imageUrl}}" ng-src="{{smallImage}}" alt="">
+      <img class="img-responsive" ng-elevate-zoom zoom-image="{{detail.imageUrl}}" ng-src="{{smallImage}}" alt="">
     </div>
     <div class=" col-md-5 productDetail">
       <h4>{{detail.name}}</h4>
@@ -12,7 +12,34 @@
       <div class="buyProduct">
         <h5>Price: &#8377; {{detail.price}}</h5>
         <a class="waves-effect waves-light btn buy-button" ng-click="buyProduct(detail.$id)"><i class="material-icons left">shopping_basket</i>Buy</a
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<div class="container product-mobile-view">
+  <div class="row detailProduct">
+    <div class="col-md-7">
+    <img class="img-responsive materialboxed" ng-src="{{smallImage}}" alt="productImage">
+    </div>
+    <div class="col-md-5 productDetail">
+      <h4>{{detail.name}}</h4>
+      <p><b><i>Product Code:</i></b> {{detail.product_code}}</p>
+      <p><b><i>Description:</i></b> {{detail.description}}</p>
+      <p><b><i>Dimensions:</i></b> {{detail.dimensions}}</p>
+      <div class="buyProduct">
+        <h5>Price: &#8377; {{detail.price}}</h5>
+        <a class="waves-effect waves-light btn buy-button" ng-click="buyProduct(detail.$id)"><i class="material-icons left">shopping_basket</i>Buy</a
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
+</script>

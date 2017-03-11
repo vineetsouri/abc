@@ -28,10 +28,12 @@ nav{
   color: black !important;
 }
 
-.about{
+.about .row{
+  border: 2px solid black;
   font-family: 'Lato', sans-serif;
 }
 .about-abc{
+  text-align: center;
   font-weight: 300;
 }
 
@@ -73,7 +75,8 @@ nav{
 
 #section2 h3{
   margin: 0px;
-  text-align: center;
+  padding-top: 15px;
+  /*text-align: center;*/
   color: white; 
   font-weight: 300;
 }
@@ -156,10 +159,6 @@ nav{
   text-align: center;
 }
 
-.products-page{
-  background-color: #bdc3c7;
-}
-
 .products-heading{
   font-family: 'Lato', sans-serif;
   font-weight: 300;
@@ -230,6 +229,7 @@ label{
   color: #E74C3C;
 }
 
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   #company-name {
@@ -260,7 +260,8 @@ label{
 
   #Mobile h3{
     margin: 0px;
-    text-align: center;
+    padding-top: 15px;
+    /*text-align: center;*/
     color: white; 
     font-weight: 300;
   }
@@ -270,11 +271,18 @@ label{
     font-size: 1em;
     text-align: center;
   }
+
+  .product-laptop-view{
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 800px) {
 
   #Mobile{
+    display: none;
+  }
+  .product-mobile-view{
     display: none;
   }
 }
