@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="uploadProduct">
 <h2>upload your product</h2>
     <form ng-submit="updateProduct()">
         <div class="row">
@@ -42,6 +42,27 @@
         <div class="row">
             <div class="col-md-4">
                 <div href="#" class="upload_button" ngf-select="uploadProduct($files)" multiple title="upload" resetOnClick="true" >Upload</div>
+                <p>*<i>Note:</i> Main Product Image</p>
+            </div>
+            <div class="col-md-4">
+                <div href="#" class="upload_button" ngf-select="uploadOtherProducts($files, 1)" multiple title="upload" resetOnClick="true" >Upload</div>
+                <p>*Product Image 1</p>
+            </div>
+            <div class="col-md-4">
+                <div href="#" class="upload_button" ngf-select="uploadOtherProducts($files, 2)" multiple title="upload" resetOnClick="true" >Upload</div>
+                <p>*Product Image 2</p>
+            </div>
+            <div class="col-md-4">
+                <div href="#" class="upload_button" ngf-select="uploadOtherProducts($files, 3)" multiple title="upload" resetOnClick="true" >Upload</div>
+                <p>*Product Image 3</p>
+            </div>
+            <div class="col-md-4">
+                <div href="#" class="upload_button" ngf-select="uploadOtherProducts($files, 4)" multiple title="upload" resetOnClick="true" >Upload</div>
+                <p>*Product Image 4</p>
+            </div>
+            <div class="col-md-4">
+                <div href="#" class="upload_button" ngf-select="uploadOtherProducts($files, 5)" multiple title="upload" resetOnClick="true" >Upload</div>
+                <p>*Product Image 5</p>
             </div>
         </div>
         <div class="row">
