@@ -60,6 +60,11 @@ angular
         controller: 'FaqCtrl',
         controllerAs: 'faq'
       })
+      .when('/abckidsworld/category', {
+        templateUrl: 'views/abckidsworld/category.html',
+        controller: 'AbckidsworldCategoryCtrl',
+        controllerAs: 'CategoryCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

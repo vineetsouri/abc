@@ -1,0 +1,34 @@
+<div class="container" style="height:70vh">
+	<h3>Create and Delete Category</h3>
+	<div>
+		<div class="row">
+            <div class="col-md-6">
+			<form ng-submit="saveCategory()">
+			<h4>Create</h4>
+                <md-input-container>
+                <label>Name</label>
+                <input ng-model="details.name">
+              </md-input-container>
+			<input type="submit" class="btn btn-success" value="Submit" />
+			</form>
+            </div>
+            <div class="col-md-6">
+			<h4>Delete</h4>
+                <md-input-container>
+		          <label> Select Categories</label>
+		             <md-select ng-model="clickedCategories">
+		              <md-option><em>None</em></md-option>
+		              <md-option ng-repeat="state in categories" ng-value="state.$id">
+		                {{state.name}}
+		              </md-option>
+		            </md-select>
+		        </md-input-container>
+		        <div>
+			      <md-button class="md-warn md-raised " ng-click="showConfirm($event)" >
+				      Delete Category
+				    </md-button>
+			    </div>
+            </div>
+        </div>
+	</div>
+</div>

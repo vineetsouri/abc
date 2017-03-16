@@ -16,6 +16,8 @@ angular.module('abckidsworldApp')
     var productId;
     var service = {
       product: product,
+      addCategory: addCategory,
+      removeCategory:removeCategory,
       getCategories: getCategories,
       getProducts: getProducts,
       removeProducts: removeProducts,
@@ -33,6 +35,13 @@ angular.module('abckidsworldApp')
 
       return $firebaseObject(ref);
     }
+
+    function addCategory(){
+      var ref = firebase.database().ref("categories").push();
+
+      return $firebaseObject(ref);
+    }
+
 
     function getCategories(){
       var ref = firebase.database().ref().child("categories");
@@ -74,6 +83,10 @@ angular.module('abckidsworldApp')
 
     function removeProducts(productId, product){
       product.$remove(product.$indexFor(productId));
+    }
+
+    function removeCategory(categoryId,category){
+      category.$remove(category.$indexFor(categoryId));
     }
     
     function addContact(){
