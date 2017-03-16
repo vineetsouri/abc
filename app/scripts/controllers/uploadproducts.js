@@ -126,7 +126,7 @@ angular.module('abckidsworldApp')
               file: file
             }
           }).success(function (data, status, headers, config) {
-            $scope.details.topProductImage = data.url;
+            $scope.details.productImage4 = data.url;
             $scope.checkImage = false;
           }).error(function (data, status, headers, config) {
             file.result = data;
@@ -146,7 +146,7 @@ angular.module('abckidsworldApp')
               file: file
             }
           }).success(function (data, status, headers, config) {
-            $scope.details.productImage4 = data.url;
+            $scope.details.productImage5 = data.url;
             $scope.checkImage = false;
           }).error(function (data, status, headers, config) {
             file.result = data;
@@ -167,7 +167,7 @@ angular.module('abckidsworldApp')
               file: file
             }
           }).success(function (data, status, headers, config) {
-            $scope.details.productImage5 = data.url;
+            $scope.details.topProductImage = data.url;
             $scope.checkImage = false;
           }).error(function (data, status, headers, config) {
             file.result = data;
