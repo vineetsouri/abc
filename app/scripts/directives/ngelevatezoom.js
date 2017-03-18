@@ -11,10 +11,9 @@ angular.module('abckidsworldApp')
     return {
     restrict: 'A',
     link: function(scope, element, attrs) {
-      console.log("Linking")
-
       //Will watch for changes on the attribute
       attrs.$observe('zoomImage',function(){
+        element.removeData('zoom-image');
           linkElevateZoom();
       })
       
