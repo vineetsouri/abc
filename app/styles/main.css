@@ -33,12 +33,13 @@ nav{
   font-family: 'Lato', sans-serif;
 }
 .about-abc{
-  text-align: center;
+  text-align: left;
+  padding-left: 0.5em;
   font-weight: 300;
 }
 
 .about p{
-  font-weight: 100;
+  /*font-weight: 100;*/
   margin: 2em;
 }
 
@@ -285,9 +286,10 @@ label{
   }
 
   .about-abc{
-    font-weight: 300;
-    font-size: 1em;
-    text-align: center;
+    /*font-weight: 300;*/
+    font-size: 2em;
+    padding-left: 1em;
+    text-align: left;
   }
 
   .product-laptop-view{
