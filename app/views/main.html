@@ -39,7 +39,7 @@
         <button type="button" class="slick-prev arrow_button">Previous</button>
         <div ng-repeat="product in topProducts">
           <span class="productImage">
-            <img class="img-responsive" ng-src="{{product.topProductImage}}" alt="{{product.name}}" style="height: 300px; width:280px" ng-click="checkProduct(product.$id)">
+            <img class="img-responsive" ng-src="{{product.topProductImage.split('upload')[0]+'upload/w_300'+product.topProductImage.split('upload')[1]}}" alt="{{product.name}}" style="height: 300px; width:280px" ng-click="checkProduct(product.$id)">
             <p>{{product.name}}</p>
           </span>
         </div>
@@ -54,7 +54,7 @@
         <button type="button" class="slick-prev arrow_button">Previous</button>
         <div ng-repeat="product in topProducts">
           <span class="productImage">
-            <img class="img-responsive top-image" ng-src="{{product.topProductImage}}" alt="{{product.name}}" style="height: 300px; width:300px" ng-click="checkProduct(product.$id)">
+            <img class="img-responsive top-image" ng-src="{{product.topProductImage.split('upload')[0]+'upload/w_300'+product.topProductImage.split('upload')[1]}}" alt="{{product.name}}" style="height: 300px; width:300px" ng-click="checkProduct(product.$id)">
             <p>{{product.name}}</p>
           </span>
         </div>

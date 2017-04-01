@@ -19,7 +19,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'firebase',
-    'cloudinary',,
+    'cloudinary',
     'ngFileUpload',
     'ngMaterial',
     'slick'
@@ -64,6 +64,11 @@ angular
         templateUrl: 'views/abckidsworld/category.html',
         controller: 'AbckidsworldCategoryCtrl',
         controllerAs: 'CategoryCtrl'
+      })
+      .when('/download/:category', {
+        templateUrl: 'views/download.html',
+        controller: 'DownloadCtrl',
+        controllerAs: 'download'
       })
       .otherwise({
         redirectTo: '/'

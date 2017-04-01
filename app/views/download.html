@@ -1,0 +1,60 @@
+<div class="container contact-div" ng-init="loadDetails()">
+  <div class="row buy">
+    <h5>Please fill the following details to download</h5>
+    <form class="col s12" action="https://formspree.io/vineetsouri72@gmail.com"
+      method="POST" name="myForm" ng-submit="contactSubmit()">
+      <div class="row">
+        <div class="col l6 m6 s12">
+          <div class="input-field">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix" name="CustomerName" ng-model="detail.name" type="text" class="validate" required>
+            <label for="icon_prefix">Full Name</label>
+          </div>
+          <div class="input-field">
+            <i class="material-icons prefix">phone</i>
+            <input id="icon_telephone" name="Phone" type="tel" ng-model="detail.phone" class="validate" required>
+            <label for="icon_telephone">Telephone</label>
+          </div>
+          <div class="input-field">
+            <i class="material-icons prefix">email</i>
+            <input id="email" type="email" name="Email" ng-model="detail.email" class="validate" required>
+            <label for="email" data-error="wrong" data-success="right">Email</label>
+          </div>
+        </div>
+        <div class="col l6 m6 s12">
+          <div class="input-field ">
+            <i class="material-icons prefix">mode_edit</i>
+            <textarea id="icon_prefix2" class="materialize-textarea" name="description" ng-model="detail.description"></textarea>
+            <label for="icon_prefix2">Description</label>
+            <button class="btn waves-effect waves-light" ng-disabled="myForm.$invalid" type="submit" value="submit" name="action" style="float:right">Submit
+              <a class="download-button" href="http://res.cloudinary.com/abckidsworld/image/upload/v1490763655/VineetSouri_Resume_2017_piignq.pdf" download></a>
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="contact-address">Contact Address</h4>
+      <address>
+        Plot No.112/A<br>
+        Aleap Industrial Estate,<br>
+        Near Pragathi Nagar,<br>
+        Opp. JNTU Kukatpally,<br>
+        Hyderabad,<br>
+        Telangana - 500 090<br>
+        Phone no - 9052937773
+      </address>
+    </div>
+    <div class="col-md-6">
+      <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.50692356707!2d78.39648754996166!3d17.53103568793374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8e1106b64477%3A0xc3906ff4e365f7b2!2sABC+Kids+World!5e0!3m2!1sen!2sin!4v1480758894045"></iframe>
+    </div>
+  </div>
+  <div>
+    download link: <a href="http://res.cloudinary.com/abckidsworld/image/upload/v1490763655/VineetSouri_Resume_2017_piignq.pdf" download> Resume</a>
+  </div>
+</div>

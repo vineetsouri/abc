@@ -22,7 +22,6 @@ angular.module('abckidsworldApp')
     var p = productService.getProductById($scope.productId).$loaded();
     p.then(function(val){
       $scope.detail = val;
-      console.log($scope.detail);
       var image = val.imageUrl;
       // $scope.productImage1 = val.productImage1;
       // $scope.productImage2 = val.productImage2;
